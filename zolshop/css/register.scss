@@ -1,0 +1,409 @@
+@charset "utf-8";
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+th,
+td,
+p,
+blockquote,
+pre,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+hr {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font: 12px/1.5 Arial;
+    color: #666;
+}
+select,
+input,
+button {
+    vertical-align: middle;
+    font-size: 100%;
+}
+ul,
+ol {
+    list-style: none;
+}
+fieldset,
+img {
+    border: 0;
+}
+a {
+    text-decoration: none;
+    color: #666;
+}
+a:hover {
+    color: red;
+    text-decoration: underline;
+}
+/**********顶部***********/
+.top {
+    width: 990px;
+    margin: 0 auto;
+    overflow: hidden;
+    .header {
+        padding: 20px 0;
+        overflow: hidden;
+        .register-bar {
+            float: right;
+            padding: 21px 0 0;
+            font-size: 14px;
+            line-height: 22px;
+            width: 220px;
+            a {
+                float: right;
+                height: 16px;
+                padding: 3px 10px;
+                color: #c00;
+                font: normal 14px/14px "Microsoft YaHei", "\5FAE\8F6F\96C5\9ED1";
+            }
+            a:hover {
+                color: #fff;
+                background-color: #cd1f1f;
+            }
+        }
+        img {
+            float: left;
+            border: 0;
+        }
+        p {
+            float: left;
+            margin: 8px 0 0 8px;
+            padding-left: 10px;
+            font: 14px/44px simsun;
+            color: #666;
+            border-left: 1px solid #e6e6e6;
+            cursor: pointer;
+        }
+    }
+}
+/**********中部***********/
+.main {
+    padding: 0 0 100px;
+    border: 1px solid #e6e6e6;
+    overflow: hidden;
+    width: 980px;
+    margin: auto;
+    .title {
+        padding: 16px 0 16px 90px;
+        background: #fafafa;
+        font: 18px/28px "Microsoft YaHei", "\5FAE\8F6F\96C5\9ED1";
+        color: #999;
+    }
+    .left {
+        float: left;
+        padding: 30px 0 0 89px;
+        width: 500px;
+        .register-tab {
+            li {
+                float: left;
+                position: relative;
+                width: 250px;
+                border: 1px solid #e6e6e6;
+                border-bottom: 0 none;
+                text-align: center;
+            }
+            height: 39px;
+            border-bottom: 1px solid #e6e6e6;
+            .current {
+                span {
+                    color: #c00;
+                    line-height: 36px;
+                    display: inline-block;
+                    font: 18px/38px "Microsoft YaHei", "\5FAE\8F6F\96C5\9ED1";
+                }
+                cursor: default;
+                margin: 0 -1px -1px;
+                padding: 0 0 2px;
+                border-top: 2px solid #e02d2d;
+                background: #fff;
+                cursor: default;
+                .phone-number {
+                    background: url("../imgs/register/login-bg.png") no-repeat;
+                    padding: 0 0 0 20px;
+                    background-position: -158px -235px;
+                }
+            }
+        }
+        .register-phone-number {
+            padding: 30px 0 0;
+        }
+        .email-captcha {
+            #J_register_checkcode_phone {
+                float: left;
+                width: 158px;
+            }
+            .captcha-img {
+                float: left;
+                margin: 0 10px 0 0;
+            }
+            .captcha-change {
+                float: left;
+                font: 12px/40px "Arial";
+                color: #134ba0;
+            }
+        }
+        .sms-captcha {
+            #J_register_phone_code {
+                float: left;
+                width: 158px;
+            }
+            .get-captcha {
+                float: left;
+                width: 110px;
+                height: 40px;
+                border: 0 none;
+                background-position: 0 -148px;
+                font: 12px/40px "Arial";
+                color: #666;
+                cursor: pointer;
+                background: #f8f8f8;
+                border: 1px solid #ccc;
+            }
+            .loading {
+                float: left;
+                width: 108px;
+                height: 38px;
+                border: 1px solid #ccc;
+                background: #e6e6e6;
+                font: 12px/38px "Arial";
+                text-align: center;
+                border-radius: 10px;
+                color: #999;
+            }
+        }
+        .register-form {
+            height: 40px;
+            position: relative;
+            margin: 0 0 42px;
+            padding: 0 0 0 83px;
+            .label {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 83px;
+                font: 14px/40px "Arial";
+                text-align: right;
+                color: #666;
+            }
+            .text {
+                display: block;
+                margin: 0 10px 0 0;
+                padding: 8px 5px;
+                width: 278px;
+                height: 22px;
+                border: 1px solid #ccc;
+               border-radius: 5px;
+                -webkit-border-radius: 5px
+            }
+            .right-tips {
+                position: absolute;
+                top: 12px;
+                left: 383px;
+                width: 15px;
+                height: 15px;
+                background: url("../imgs/register/login-bg.png") no-repeat;
+                background-position: -155px -162px;
+            }
+            .wrong-tips {
+                position: absolute;
+                top: 0;
+                left: 383px;
+                padding: 0 0 0 20px;
+                font: 12px/40px "Arial";
+                color: #ff3333;
+                background: url("../imgs/register/login-bg.png") no-repeat;
+                background-position: -155px -184px;
+                white-space: nowrap;
+            }
+            #J_register_pasword_phone_tips{
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 383px;
+                padding: 0 0 0 20px;
+                font: 12px/40px "Arial";
+                color: #ff3333;
+                
+            }
+            .tips {
+                position: absolute;
+                top: 47px;
+                left: 83px;
+                color: #aaa;
+            }
+            /***验证码******/
+        }
+        .xh {
+            padding: 0 7px 0 0;
+            font-size: 12px;
+            font-family: "Simsun";
+            color: #f30;
+            font-style: normal;
+        }
+        .agreement {
+            display: block;
+            padding: 0 0 0 83px;
+            height: 32px;
+            font: 12px/32px "Arial";
+            color: #999;
+            a {
+                color: #134ba0;
+            }
+            a:hover {
+                color: red;
+            }
+        }
+        .register-btn {
+            display: block;
+            margin: 20px 0 0 83px;
+            width: 290px;
+            height: 40px;
+            font: bold 14px/40px "Arial";
+            color: #fff;
+            text-align: center;
+            border: 0 none;
+            background: url("../imgs/register/zhuce.png") no-repeat;
+            background-position: 0 0;
+            cursor: pointer;
+        }
+        .register-btn:hover {
+            background-position: 0 -41px;
+        }
+    }
+    .fast-login {
+        float: right;
+        margin: 30px 0 0;
+        padding: 0 80px 0 25px;
+        width: 176px;
+        border-left: 1px solid #f5f5f5;
+        p {
+            margin: -6px 0 0;
+            font: 12px/24px "Arial";
+            color: #666;
+        }
+        a{
+            margin: 0 6px;
+            color:blue
+        }
+        .fast-login-list {
+            a {
+                display: block;
+                margin: 15px 0 0;
+                width: 170px;
+                height: 36px;
+                background: url("../imgs/register/login-bg.png") no-repeat;
+                text-indent: -10000px;
+                overflow: hidden;
+            }
+            a:hover{
+                opacity: 0.8;
+            }
+            .sina {
+                background-position: 0 0;
+            }
+            .qq {
+                background-position: 0 -37px;
+            }
+            .alipay {
+                background-position: 0 -74px;
+            }
+            .baidu {
+                background-position: 0 -111px;
+            }
+        }
+    }
+}
+/**********底部***********/
+.footer {
+    margin: 50px 0 0;
+    padding: 12px 0 25px;
+    border-top: 1px solid #dcdcdc;
+    .copy {
+        width: 990px;
+        margin: 0 auto;
+        .about {
+            float: left;
+            margin: 0 0 0 -10px;
+            color: #ccc;
+            a {
+                margin: 0 10px;
+                color: #666;
+            }
+            a:hover {
+                color: red;
+            }
+        }
+        .copyright {
+            float: right;
+            color: #666;
+        }
+    }
+}
+
+
+
+
+//验证码
+
+.yanzhengma{
+    width: 200px;
+    height: 200px;
+    background: #CCCCCC;
+    border: 5px solid #3D3D3D;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    top: 350px;
+    z-index: 10px;
+    h3{
+       text-align: center;
+       height: 100px;
+       line-height: 100px;
+       font-size: 30px;
+    }
+    h4{
+        text-align: center;
+       height: 100px;
+        font-size: 30px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

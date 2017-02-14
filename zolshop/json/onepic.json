@@ -1,0 +1,33 @@
+[
+	{	
+	"number":"123",
+		"src1": "imgs/onepic1.jpg",
+			"src2": "imgs/onepicshow1.png",
+		"jishao": "PDAF相位对焦,快速充电"
+	}, {
+		"number":"1231",
+"src1": "imgs/onepic2.jpg",
+			"src2": "imgs/onepicshow1.png",
+		"jishao": "PDAF相位对焦,快速充电"
+	}, {
+		"number":"423",
+"src1": "imgs/onepic3.jpg",
+			"src2": "imgs/onepicshow1.png",
+		"jishao": "PDAF相位对焦,快速充电"
+	}, {
+		"number":"4523",
+"src1": "imgs/onepic4.jpg",
+			"src2": "imgs/onepicshow1.png",
+		"jishao": "PDAF相位对焦,快速充电"
+	}, {
+	"number":"1233",
+"src1": "imgs/onepiv5.jpg",
+			"src2": "imgs/onepicshow1.png",
+		"jishao": "PDAF相位对焦,快速充电"
+	}, {
+		"number":"9823",
+"src1": "imgs/onepic6.jpg",
+			"src2": "imgs/onepicshow1.png",
+		"jishao": "PDAF相位对焦,快速充电"
+	}
+]

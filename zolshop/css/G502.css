@@ -1,0 +1,972 @@
+@charset "UTF-8";
+.zs-wrapper {
+  width: 1200px;
+  margin: 0 auto;
+}
+.zs-wrapper .zs-title {
+  height: 32px;
+}
+.zs-wrapper .zs-title a {
+  margin: 0 8px;
+  line-height: 32px;
+}
+.zs-wrapper .zs-title span {
+  margin-left: 8px;
+}
+.zs-wrapper .zs-inner {
+  border: 1px solid #EDEDED;
+  overflow: hidden;
+}
+.zs-wrapper .zs-inner .inner-left {
+  float: left;
+  width: 1000px;
+}
+.zs-wrapper .zs-inner .inner-left .zs-focus {
+  float: left;
+  padding: 10px 0 0 20px;
+  width: 380px;
+  position: relative;
+  z-index: 8;
+}
+.zs-wrapper .zs-inner .inner-left .zs-focus .zs-big-pic a {
+  cursor: crosshair;
+  position: relative;
+  display: block;
+  outline: 0 none;
+  text-decoration: none;
+  width: 400px;
+  -moz-user-select: none;
+}
+.zs-wrapper .zs-inner .inner-left .zs-focus .zs-big-pic a .MagicZoomPup {
+  background: red;
+  z-index: 10;
+  position: absolute;
+  opacity: 0.5;
+  width: 198.5px;
+  height: 198.5px;
+  left: 201.5px;
+  top: 0;
+  display: none;
+}
+.zs-wrapper .zs-inner .inner-left .zs-focus #zoom1-big {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: 10px;
+  left: 445px;
+  overflow: hidden;
+  display: none;
+  border: 1px solid #ddd;
+  background-color: red;
+}
+.zs-wrapper .zs-inner .inner-left .zs-focus .zs-focus-thumb {
+  position: relative;
+}
+.zs-wrapper .zs-inner .inner-left .zs-focus .zs-focus-thumb .zs-focus-list {
+  position: relative;
+  height: 70px;
+  overflow: hidden;
+  width: 400px;
+}
+.zs-wrapper .zs-inner .inner-left .zs-focus .zs-focus-thumb .zs-focus-list ul {
+  width: 415px;
+  padding: 0 0 0 1px;
+  overflow: hidden;
+}
+.zs-wrapper .zs-inner .inner-left .zs-focus .zs-focus-thumb .zs-focus-list ul li {
+  cursor: pointer;
+  float: left;
+  width: 70px;
+  height: 70px;
+  margin: 0 12px 0 0;
+  position: relative;
+}
+.zs-wrapper .zs-inner .inner-left .zs-focus .zs-focus-thumb .zs-focus-list .hover .border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 66px;
+  height: 66px;
+  border: 2px solid #C00;
+}
+.zs-wrapper .zs-inner .inner-left .zs-focus .zs-focus-thumb .borderRed {
+  border-color: red;
+}
+.zs-wrapper .zs-inner .inner-left .zs-deal {
+  float: right;
+  padding: 10px 20px 0 0;
+  width: 530px;
+  /**********交易块*********/
+}
+.zs-wrapper .zs-inner .inner-left .zs-deal .zs-commodity-title {
+  padding: 7px 0 0;
+  font: 16px/22px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+}
+.zs-wrapper .zs-inner .inner-left .zs-deal .zs-price-panel {
+  margin: 18px 0 0;
+  padding: 4px 10px;
+  overflow: hidden;
+  background: url("../imgs/G502_imgs/zs-price-panel.png");
+}
+.zs-wrapper .zs-inner .inner-left .zs-deal .zs-price-panel .zs-original-price {
+  padding: 0 0 0 70px;
+  position: relative;
+  line-height: 32px;
+}
+.zs-wrapper .zs-inner .inner-left .zs-deal .zs-price-panel .zs-original-price dt {
+  position: absolute;
+  top: 0;
+  left: 5px;
+  width: 65px;
+  color: #999;
+}
+.zs-wrapper .zs-inner .inner-left .zs-deal .zs-price-panel .zs-sale-price {
+  padding: 0 0 0 70px;
+  position: relative;
+  line-height: 32px;
+  background: url("../imgs/G502_imgs/zs-price-panel.png");
+}
+.zs-wrapper .zs-inner .inner-left .zs-deal .zs-price-panel .zs-sale-price dt {
+  position: absolute;
+  top: 0;
+  left: 5px;
+  width: 65px;
+  color: #999;
+}
+.zs-wrapper .zs-inner .inner-left .zs-deal .zs-price-panel .zs-sale-price .zs-price {
+  float: left;
+  margin: -2px 0 0;
+  height: 32px;
+  overflow: hidden;
+  font-size: 16px;
+  vertical-align: middle;
+  color: #c00;
+}
+.zs-wrapper .zs-inner .inner-left .zs-deal .zs-price-panel .zs-sale-price .zs-price em {
+  padding: 0 0 0 5px;
+  font-family: tahoma;
+  font-size: 30px;
+  font-weight: bold;
+  font-style: normal;
+}
+.zs-wrapper .zs-inner .inner-left .zs-deal .zs-price-panel .zs-sale-price .zs-countdown {
+  float: left;
+  margin: 5px 0 0 10px;
+  padding: 0 3px;
+  background: #c00;
+  line-height: 18px;
+  color: #fff;
+}
+.zs-wrapper .zs-inner .inner-left .zs-deal .zs-detail-infor {
+  padding: 10px 0 20px;
+  /***购买数量****/
+  /***购买按钮***/
+}
+.zs-wrapper .zs-inner .inner-left .zs-deal .zs-detail-infor dl {
+  position: relative;
+}
+.zs-wrapper .zs-inner .inner-left .zs-deal .zs-detail-infor dt {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 32px;
+  line-height: 32px;
+  color: #666;
+}
+.zs-wrapper .zs-inner .inner-left .zs-deal .zs-detail-infor dd {
+  padding: 0 0 0 65px;
+  line-height: 32px;
+}
+.zs-wrapper .zs-inner .inner-left .zs-deal .zs-detail-infor .zs-freight-a {
+  margin: 0 10px;
+  padding: 5px 0 0;
+  z-index: 2;
+  overflow: hidden;
+}
+.zs-wrapper .zs-inner .inner-left .zs-deal .zs-detail-infor .zs-freight-a dd .zs-freight-area {
+  float: left;
+  position: relative;
+}
+.zs-wrapper .zs-inner .inner-left .zs-deal .zs-detail-infor .zs-freight-a dd .zs-freight-area .area-selected {
+  position: relative;
+  float: left;
+  z-index: 5;
+}
+.zs-wrapper .zs-inner .inner-left .zs-deal .zs-detail-infor .zs-freight-a dd .zs-freight-area .area-selected .area-name {
+  position: relative;
+  display: inline-block;
+  height: 23px;
+  border: 1px solid #e6e6e6;
+  padding: 0 20px 0 6px;
+  line-height: 23px;
+  cursor: pointer;
+  background-position: 100% 0;
+  z-index: 6;
+  background-color: #fff;
+}
+.zs-wrapper .zs-inner .inner-left .zs-deal .zs-detail-infor .zs-freight-a dd .zs-freight-area .area-selected .selecet-layer-wrap {
+  display: none;
+  position: absolute;
+  top: 24px;
+  left: 0;
+  padding: 17px 17px 12px 14px;
+  width: 400px;
+  background-color: #fff;
+  border: 1px solid #bfbfbf;
+  box-shadow: 0 0 1px 2px rgba(230, 230, 230, 0.5);
+  z-index: 5;
+}
+.zs-wrapper .zs-inner .inner-left .zs-deal .zs-detail-infor .area-selected-infor {
+  margin-left: 10px;
+  float: left;
+}
+.zs-wrapper .zs-inner .inner-left .zs-deal .zs-detail-infor .area-selected-infor .yufei {
+  margin-left: 8px;
+}
+.zs-wrapper .zs-inner .inner-left .zs-deal .zs-detail-infor .area-selected-infor .yufei i {
+  font-style: normal;
+  font-weight: bold;
+}
+.zs-wrapper .zs-inner .inner-left .zs-deal .zs-detail-infor .area-selected-infor a {
+  margin-left: 8px;
+  color: #36c;
+  text-decoration: underline;
+}
+.zs-wrapper .zs-inner .inner-left .zs-deal .zs-detail-infor .zs-evaluate {
+  margin: 5px 10px 0;
+}
+.zs-wrapper .zs-inner .inner-left .zs-deal .zs-detail-infor .zs-evaluate dd a {
+  color: #333;
+}
+.zs-wrapper .zs-inner .inner-left .zs-deal .zs-detail-infor .zs-evaluate dd a:hover {
+  color: red;
+}
+.zs-wrapper .zs-inner .inner-left .zs-deal .zs-detail-infor .zs-evaluate dd .line {
+  padding: 0 10px;
+  color: #e6e6e6;
+}
+.zs-wrapper .zs-inner .inner-left .zs-deal .zs-detail-infor .zs-evaluate dd em {
+  color: #f33;
+  font-weight: bold;
+  font-style: normal;
+}
+.zs-wrapper .zs-inner .inner-left .zs-deal .zs-detail-infor .zs-service-bar {
+  overflow: hidden;
+  margin: 0 10px;
+}
+.zs-wrapper .zs-inner .inner-left .zs-deal .zs-detail-infor .zs-service-bar #zs_shop_url {
+  color: blue;
+}
+.zs-wrapper .zs-inner .inner-left .zs-deal .zs-detail-infor .zs-service-bar #zs_shop_url:hover {
+  color: red;
+}
+.zs-wrapper .zs-inner .inner-left .zs-deal .zs-detail-infor .zs-service-bar li {
+  float: left;
+  position: relative;
+  margin: 0 0 5px;
+  padding: 0 0 0 28px;
+  width: 54px;
+  height: 24px;
+  font: 12px/22px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+}
+.zs-wrapper .zs-inner .inner-left .zs-deal .zs-detail-infor .zs-quantity {
+  padding: 20px 0 0;
+  border-top: 1px solid #EDEDED;
+  position: relative;
+}
+.zs-wrapper .zs-inner .inner-left .zs-deal .zs-detail-infor .zs-quantity dt {
+  top: 20px;
+}
+.zs-wrapper .zs-inner .inner-left .zs-deal .zs-detail-infor .zs-quantity .amount-widget {
+  float: left;
+  margin: 0 10px 0 0;
+  width: 102px;
+  height: 28px;
+  border: 1px solid #e6e6e6;
+}
+.zs-wrapper .zs-inner .inner-left .zs-deal .zs-detail-infor .zs-quantity .amount-widget .zs-no-decrease {
+  /**减**/
+  float: left;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  background: url("../imgs/bg.png") no-repeat;
+  background-position: 0 -197px;
+  background-color: #F8F8F8;
+}
+.zs-wrapper .zs-inner .inner-left .zs-deal .zs-detail-infor .zs-quantity .amount-widget .zs-goods-number {
+  /**数量框**/
+  float: left;
+  width: 44px;
+  height: 28px;
+  text-align: center;
+  font: 12px/28px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+  border: 0 none;
+  border-left: 1px solid #e6e6e6;
+  border-right: 1px solid #e6e6e6;
+  color: #333;
+  vertical-align: middle;
+}
+.zs-wrapper .zs-inner .inner-left .zs-deal .zs-detail-infor .zs-quantity .amount-widget .zs-increase {
+  /**加**/
+  float: left;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  background: url("../imgs/bg.png") no-repeat;
+  background-position: -32px -169px;
+  background-color: #f8f8f8;
+}
+.zs-wrapper .zs-inner .inner-left .zs-deal .zs-detail-infor .zs-deal-btn {
+  padding: 30px 0 0 65px;
+  height: 50px;
+}
+.zs-wrapper .zs-inner .inner-left .zs-deal .zs-detail-infor .zs-deal-btn .zs-buy-now {
+  width: 140px;
+  height: 50px;
+  color: #fff;
+  background: #C7254E;
+  float: left;
+  margin: 0 10px 0 0;
+  border-radius: 10px;
+  font: 18px/50px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+  text-align: center;
+}
+.zs-wrapper .zs-inner .inner-left .zs-deal .zs-detail-infor .zs-deal-btn .zs-buy-now:hover {
+  background: red;
+}
+.zs-wrapper .zs-inner .inner-left .zs-deal .zs-detail-infor .zs-deal-btn a:hover {
+  text-decoration: none;
+}
+.zs-wrapper .zs-inner .inner-left .zs-deal .zs-detail-infor .zs-deal-btn .zs-store-buy {
+  width: 140px;
+  height: 50px;
+  color: #fff;
+  background: pink;
+  float: left;
+  margin: 0 10px 0 0;
+  border-radius: 10px;
+  font: 18px/50px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+  text-align: center;
+}
+.zs-wrapper .zs-inner .inner-left .zs-deal .zs-detail-infor .zs-deal-btn .zs-store-buy:hover {
+  background: hotpink;
+}
+.zs-wrapper .zs-inner .inner-right {
+  float: right;
+  width: 197px;
+  border-left: 1px solid #ededed;
+}
+.zs-wrapper .zs-inner .inner-right .zs-store-name {
+  padding: 26px 10px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+.zs-wrapper .zs-inner .inner-right .zs-modbox {
+  margin: 0;
+  padding: 0 15px;
+  border: 0 none;
+}
+.zs-wrapper .zs-inner .inner-right .zs-modbox .zs-modbox-hd {
+  padding: 0;
+  border: 0 none;
+  background: none;
+  font-size: 12px;
+  color: #999;
+  height: 32px;
+  font: 14px/32px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+}
+.zs-wrapper .zs-inner .inner-right .zs-modbox .zs-custom-service li {
+  padding: 3px 0;
+  color: #666;
+  overflow: hidden;
+}
+.zs-wrapper .zs-inner .inner-right .zs-modbox .zs-custom-service li a {
+  float: left;
+}
+.zs-wrapper .zs-inner .inner-right .zs-modbox .zs-custom-service li img {
+  margin: 0 6px 0 0;
+  float: left;
+  display: inline-block;
+}
+.zs-wrapper .zs-inner .inner-right .zs-modbox .zs-custom-service li span {
+  float: left;
+  line-height: 24px;
+  color: #666;
+}
+.zs-wrapper .zs-inner .inner-right .zs-modbox .zs-contact-way {
+  padding: 5px 0 0;
+}
+.zs-wrapper .zs-inner .inner-right .zs-modbox .zs-contact-way li {
+  position: relative;
+  color: #666;
+}
+.zs-wrapper .zs-inner .inner-right .zs-btn {
+  display: inline-block;
+  margin: 0 4px;
+  width: 77px;
+  height: 28px;
+  font: 14px/28px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+  text-align: center;
+  border: 1px solid #e6e6e6;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  background: #fafafa;
+  color: #666;
+}
+.zs-wrapper .zs-inner .inner-right .zs-btn:hover {
+  background: #8C8C8C;
+}
+.zs-wrapper .zs-inner .inner-right li {
+  line-height: 24px;
+}
+.zs-wrapper .zs-modbox {
+  margin: 10px 0 0;
+  border: 1px solid #ededed;
+}
+.zs-wrapper .zs-modbox .zs-modbox-hd {
+  padding: 0 10px;
+  height: 32px;
+  font: 14px/32px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+  border-bottom: 1px solid #ededed;
+  background: #fafafa;
+}
+.zs-wrapper .zs-modbox .zs-product-list {
+  padding: 0 0 0 17px;
+  overflow: hidden;
+}
+.zs-wrapper .zs-modbox .zs-product-list li {
+  float: left;
+  padding: 20px 22px 22px;
+  width: 150px;
+}
+.zs-wrapper .zs-modbox .zs-product-list .zs-pic {
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.zs-wrapper .zs-modbox .zs-product-list .zs-title-1 {
+  display: block;
+  padding: 13px 0 0;
+  height: 32px;
+  overflow: hidden;
+  font: 12px/16px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+  cursor: pointer;
+}
+.zs-wrapper .zs-modbox .zs-product-list .zs-price {
+  padding: 4px 0 0;
+  height: 30px;
+  overflow: hidden;
+  font: 12px/30px Verdana;
+  color: #f33;
+}
+.zs-wrapper .zs-modbox .zs-product-list .zs-price span {
+  font-size: 18px;
+  font-style: normal;
+}
+
+/***主部包装****/
+.wrapper {
+  width: 1200px !important;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.wrapper .side-left {
+  float: left;
+  width: 200px;
+  overflow: hidden;
+}
+.wrapper .side-left .zs-modbox {
+  margin: 10px 0 0;
+  border: 1px solid #ededed;
+}
+.wrapper .side-left .zs-modbox .zs-modbox-hd {
+  padding: 0 10px;
+  height: 32px;
+  font: 14px/32px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+  border-bottom: 1px solid #ededed;
+  background: #fafafa;
+}
+.wrapper .side-left .zs-modbox .zs-modbox-hd input {
+  vertical-align: middle;
+  font-size: 100%;
+}
+.wrapper .side-left .zs-modbox .searchgoods {
+  padding: 10px 15px;
+}
+.wrapper .side-left .zs-modbox .searchgoods dl {
+  position: relative;
+  margin: 0 0 6px;
+  padding: 0 0 0 48px;
+}
+.wrapper .side-left .zs-modbox .searchgoods dt {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 26px;
+  line-height: 26px;
+  color: #666;
+}
+.wrapper .side-left .zs-modbox .searchgoods dd {
+  overflow: hidden;
+}
+.wrapper .side-left .zs-modbox .searchgoods .text {
+  float: left;
+  padding: 3px 5px;
+  width: 104px;
+  height: 18px;
+  line-height: 18px;
+  border: 1px solid #e6e6e6;
+}
+.wrapper .side-left .zs-modbox .searchgoods .searchprice .text {
+  width: 36px;
+  padding: 3px 5px;
+  height: 18px;
+  line-height: 18px;
+}
+.wrapper .side-left .zs-modbox .searchgoods .goodsbtn {
+  display: block;
+  margin: 0 0 0 48px;
+  width: 60px;
+  height: 26px;
+  border: 1px solid #d9d9d9;
+  background: #f7f7f7;
+  font: bold 12px/26px arial;
+  cursor: pointer;
+}
+.wrapper .side-left .goods-category ul {
+  padding: 0 0 0 43px;
+}
+.wrapper .side-left .goods-category ul li {
+  padding: 0 0 0 10px;
+  line-height: 22px;
+  background: url("../imgs/bg.png") no-repeat;
+  background-position: -56px -468px;
+}
+.wrapper .side-left .zs-sales-news li {
+  margin: -1px 0 0;
+  padding: 10px 0;
+  border-top: 1px solid #f2f2f2;
+}
+.wrapper .side-left .zs-sales-news .title {
+  display: block;
+  height: 36px;
+  line-height: 18px;
+  overflow: hidden;
+}
+.wrapper .side-left .zs-sales-news .zs-price {
+  height: 22px;
+  font-size: 12px;
+  line-height: 22px;
+  color: #999;
+}
+.wrapper .side-left .zs-sales-news .zs-price span {
+  color: red;
+  font-weight: bold;
+}
+.wrapper .side-left .all-goods {
+  margin: 0;
+}
+.wrapper .side-left .all-goods dt {
+  background: #fff;
+  border: 0 none;
+  font-weight: bold;
+  padding: 0 0 0 37px;
+  height: 34px;
+  font: 14px/34px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+  cursor: pointer;
+}
+.wrapper .side-left .all-goods dd {
+  display: block;
+  padding: 0 0 7px 37px;
+  line-height: 18px;
+}
+.wrapper .side-left .all-goods dd a {
+  margin: 0 14px 0 0;
+}
+.wrapper .side-left .unfold .position {
+  background-position: -23px -570px;
+}
+.wrapper .side-left .unfold dt {
+  padding: 0 0 0 37px;
+  height: 34px;
+  font: 14px/34px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+  background-color: #f7f7f7;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  cursor: pointer;
+  background: url("../imgs/bg.png") no-repeat;
+  background-position: -23px -602px;
+}
+.wrapper .side-left .unfold dt h3 {
+  font: 14px/34px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+}
+.wrapper .side-left .unfold dt dd {
+  display: block;
+  padding: 5px 0;
+  line-height: 22px;
+}
+.wrapper .side-left #sell-hot-goods {
+  margin: 10px 0 0;
+  border: 1px solid #ededed;
+}
+.wrapper .side-left #sell-hot-goods .side-tab .current {
+  border-bottom: 1px solid #f60;
+}
+.wrapper .side-left #sell-hot-goods .side-tab li {
+  float: left;
+  width: 84px;
+  height: 33px;
+  border-bottom: 1px solid #e6e6e6;
+  font: 14px/33px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+  text-align: center;
+  cursor: pointer;
+}
+.wrapper .side-left #sell-hot-goods span {
+  color: red;
+  margin-right: 10px;
+}
+.wrapper .side-left #sell-hot-goods li {
+  border-bottom: 1px solid #EDEDED;
+}
+.wrapper .main {
+  float: right;
+  width: 990px;
+  position: relative;
+  /****商品详情****/
+  /****右栏****/
+}
+.wrapper .main .zs-tabbarzs-tabbar-nav {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  z-index: 2;
+}
+.wrapper .main #zsTabbar ul {
+  margin: 10px 0 0;
+  height: 36px;
+  border: 1px solid #ededed;
+  background: #fafafa;
+}
+.wrapper .main #zsTabbar ul li {
+  float: left;
+  border-right: 1px solid #ededed;
+}
+.wrapper .main #zsTabbar ul li a {
+  padding: 0 15px;
+  display: block;
+  color: #333;
+  font: 14px/36px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+  white-space: nowrap;
+}
+.wrapper .main #zsTabbar ul li a:hover {
+  color: red;
+  text-decoration: none;
+}
+.wrapper .main #zsTabbar ul li em {
+  color: red;
+}
+.wrapper .main #zsTabbar ul li .phone-purchase {
+  position: relative;
+}
+.wrapper .main #zsTabbar ul li .phone-purchase .code {
+  display: none;
+  position: absolute;
+  top: 36px;
+  left: -1px;
+  padding: 10px 14px;
+  width: 91px;
+  border: 1px solid #ededed;
+  border-top-color: #fff;
+  background: #fff;
+  z-index: 1;
+}
+.wrapper .main #zsTabbar ul li .phone-purchase a {
+  position: relative;
+  zoom: 1;
+  padding: 0 25px 0 38px;
+  background-position: -24px -1230px;
+  color: #c00;
+}
+.wrapper .main #zsTabbar ul li .phone-purchase a .ico {
+  position: absolute;
+  top: 15px;
+  right: 16px;
+  width: 5px;
+  height: 3px;
+  background: url("../imgs/bg.png");
+  background-position: 0 -1241px;
+}
+.wrapper .main #zsTabbar ul .cur {
+  margin: -1px 0 -1px -1px;
+  padding: 0 0 2px;
+  position: relative;
+  height: 34px;
+  background: #fff;
+  border: 1px solid #ededed;
+  border-top: 2px solid #c00;
+  border-bottom: 0 none;
+}
+.wrapper .main #zsTabbar ul .cur a {
+  display: block;
+  font: 14px/34px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+  color: #333;
+  text-decoration: none;
+  padding: 0 15px;
+  white-space: nowrap;
+}
+.wrapper .main .zs-goods-detail {
+  position: absolute;
+  top: 50px;
+}
+.wrapper .main .zs-goods-detail .sevice-title {
+  margin-top: 20px;
+  width: 790px;
+  height: 33px;
+  background: url("../imgs/G502_imgs/sevice-title-new.png");
+  font: 20px/33px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+}
+.wrapper .main .zs-goods-detail .sevice-title .title {
+  display: inline-block;
+  padding: 0 0 0 10px;
+  width: 160px;
+  text-align: center;
+  color: #c00;
+}
+.wrapper .main .zs-goods-detail .sevice-title .english-title {
+  display: inline-block;
+  padding: 0 0 0 50px;
+  color: #fff;
+}
+.wrapper .main .zs-goods-detail .service-content {
+  overflow: hidden;
+  padding: 10px 0;
+  font: 14px/24px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+  color: #646464;
+}
+.wrapper .main .zs-goods-detail .service-content .zs-goods-content {
+  width: 790px;
+  overflow: hidden;
+}
+.wrapper .main .zs-goods-detail .service-content .zs-goods-content p {
+  margin-bottom: 10px;
+}
+.wrapper .main .zs-goods-detail .service-content .zs-goods-content img {
+  width: 790px;
+  vertical-align: middle;
+}
+.wrapper .main .side-right {
+  position: absolute;
+  right: 0;
+  top: 36px;
+  width: 118px;
+  border: 1px solid #ededed;
+  border-top: 0 none;
+  background: #fafafa;
+  margin: 20px 0;
+  padding: 0 40px;
+  overflow: hidden;
+}
+.wrapper .main .side-right a {
+  display: block;
+  padding: 0 0 0 22px;
+  background: url("../imgs/G502_imgs/side-right.png") no-repeat;
+  color: #333;
+}
+.wrapper .main .side-right .cur a {
+  background-position: 0 -45px;
+  color: red;
+}
+.wrapper .main .side-right ul {
+  margin: -14px 0;
+}
+.wrapper .main .side-right ul li {
+  height: 45px;
+  font: 14px/45px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+  vertical-align: middle;
+}
+
+/**********************侧边工栏***************************/
+.toolbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 33px;
+  height: 100%;
+  background: #2d2d2d;
+}
+.toolbar .side-order {
+  position: relative;
+  margin: 0 0 12px;
+  background-color: #2d2d2d;
+  height: 37px;
+  cursor: pointer;
+  background: url("../imgs/side.png") no-repeat;
+  top: 220px;
+}
+.toolbar .side-order .side-order-red {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 33px;
+  width: 0;
+  height: 37px;
+  background: red;
+  text-align: center;
+  color: white;
+  line-height: 37px;
+}
+.toolbar .side-order:hover {
+  background-color: red;
+}
+.toolbar .side-footprint {
+  position: relative;
+  margin: 0 0 12px;
+  background-color: #2d2d2d;
+  width: 37px;
+  height: 37px;
+  cursor: pointer;
+  background: url("../imgs/side.png") no-repeat;
+  background-position: 0 -74px;
+  top: 240px;
+}
+.toolbar .side-footprint .side-footprint-red {
+  position: absolute;
+  top: 0;
+  right: 33px;
+  width: 0;
+  height: 37px;
+  background: red;
+  text-align: center;
+  color: white;
+  line-height: 37px;
+}
+.toolbar .side-footprint:hover {
+  background-color: red;
+}
+.toolbar .side-shopcrat {
+  position: relative;
+  margin: 0 0 12px;
+  background-color: #2d2d2d;
+  width: 37px;
+  height: 37px;
+  cursor: pointer;
+  background: url("../imgs/side.png") no-repeat;
+  background-position: 0 -111px;
+  top: 260px;
+}
+.toolbar .side-shopcrat .side-shopcrat-red {
+  position: absolute;
+  top: 0;
+  right: 33px;
+  width: 0;
+  height: 37px;
+  background: red;
+  text-align: center;
+  color: white;
+  line-height: 37px;
+}
+.toolbar .side-shopcrat:hover {
+  background-color: red;
+}
+.toolbar .side-feedback {
+  width: 27px;
+  height: 27px;
+  cursor: pointer;
+  color: #fff;
+  display: block;
+  padding: 5px;
+  text-align: center;
+  font: 12px/14px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+  top: 440px;
+  position: absolute;
+}
+.toolbar .side-backtop {
+  display: block;
+  width: 37px;
+  height: 37px;
+  background: url("../imgs/side.png") no-repeat;
+  background-position: 0 -185px;
+  background-color: #2d2d2d;
+  position: absolute;
+  top: 600px;
+}
+.toolbar .side-backtop:hover {
+  background-color: red;
+}
+
+/******************添加购物车****************************/
+.zs-layer-box {
+  filter: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin: 0 0 0 -208px;
+  padding: 4px;
+  width: 416px;
+  background: rgba(0, 0, 0, 0.15);
+  z-index: 200;
+}
+.zs-layer-box .zs-layer-body {
+  padding: 40px 20px 40px 48px;
+  background: #fff;
+  border: 1px solid #ccc;
+}
+.zs-layer-box .zs-layer-body h3 {
+  padding: 0 0 5px;
+  font: 18px/24px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+}
+.zs-layer-box .zs-layer-body p {
+  line-height: 26px;
+  color: #666;
+}
+.zs-layer-box .zs-layer-hd {
+  position: relative;
+}
+.zs-layer-box .zs-close {
+  position: absolute;
+  top: -30px;
+  right: -10px;
+  display: block;
+  width: 18px;
+  height: 17px;
+  text-indent: -9999em;
+  font: 0/0 arial;
+  background: url(../imgs/bg.png) no-repeat;
+  background-position: -8px -280px;
+  cursor: pointer;
+}
+.zs-layer-box .zs-layer-content {
+  padding: 0;
+}
+.zs-layer-box .zs-layer-content .zs-success {
+  padding: 10px 0 8px 60px;
+  background: url(../imgs/bg.png) no-repeat;
+  background-position: -14px -893px;
+}
+.zs-layer-box .zs-layer-foot {
+  padding: 15px 0 0 60px;
+}
+.zs-layer-box .zs-layer-foot .zs-settlement-btn {
+  display: inline-block;
+  margin: 0 10px 0 0;
+  width: 110px;
+  height: 30px;
+  font-size: 12px;
+  line-height: 30px;
+  color: #fff;
+  border: 0 none;
+  background: #c00;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
+.zs-layer-box .zs-layer-foot .zs-settlement-btn a {
+  color: #36c;
+  text-decoration: none;
+}

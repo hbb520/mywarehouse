@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>购物车</title>
+		<script src="js/jquery-1.12.1.js"></script>
+		<link href="css/csrt.css" rel="stylesheet" />
+		<link href="css/public.css" rel="stylesheet" />
+	</head>
+
+		<body style="overflow-x:hidden;">
+		<div class="top">
+			<div class="toper" style="width: 960px; margin: 0 auto;">
+				<div class="zc-login-info">
+
+					<a href="#" class="shouye">商城首页</a>
+
+					<span class="login">Hi~欢迎来到ZOL商域,请
+					<a href="login.html" >登录</a></span>
+					<span class="register" style="padding: 0 10px;">
+						<a href="register.html" >免费注册</a>
+					</span>
+				</div>
+
+				<ul class="quick-menu">
+					<li>
+						<a href="#">我的订单</a>
+					</li>
+					<li class="zc-my-center">
+						<a href="#" class="zc-hd">买家中心 <span class="ico1">∨</span></a>
+						<div class="zc-my-center-bd" id="zc-my-center-bd" style="display:none;">
+							<a href="#" style="display:none;">我的优惠券&nbsp;&nbsp;<em>8</em></a>
+							<a href="#">关注的店铺&nbsp;&nbsp;<em id="focusShopNum">30</em></a>
+							<a href="#">关注的商品&nbsp;&nbsp;<em id="focusGoodsNum">47</em></a>
+						</div>
+					</li>
+					<li>
+						<a href="#" id="shop-cart-num">购物车0件</a>
+					</li>
+					<li>
+						<a href="#">帮助中心</a>
+					</li>
+					<li class="zc-separator" style="margin-top:5px">|</li>
+					<li class="zc-mobile">
+						<a href="javascript:;" class="zc-zc-mobile-hd"><img src="imgs/top_pho.jpg" />手机商城 <span class="ico2">∨</span></a>
+						<div class="zc-mobile-bd" id="zc-mobile-bd" style="display:none;"><img src="imgs/top_code.png" height="130" width="130"></div>
+					</li>
+					<li>
+						<a href="#">中关村在线</a>
+					</li>
+					<li>
+						<a href="#">商家入驻</a>
+					</li>
+					<li class="lianxikefu">
+						<a href="javascript:;" class="zc-hd">联系客服 <span class="ico3">∨</span></a>
+						<div class="zc-service-tel" style="display: none;">400-678-0068</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--头-->
+		<div class="header" style="padding: 30px 0;width: 960px;height:40px;margin: 0 auto;">
+			<div class="logo">
+				<a href="#"><img src="imgs/logo_157x32.png" height="40" width="165"><img src="imgs/cart/logo-text.png" width="165" height="40"></a>
+			</div>
+			<div class="flow-step">
+				
+				<ul class="flow-step-1">
+					<li class="s1">加入购物车</li>
+					<li class="s2">下订单</li>
+					<li class="s3">去付款</li>
+					<li class="s4">确认收货</li>
+					<li class="s5">评价</li>
+				</ul>
+			</div>
+			
+		</div>
+		<!--主-->
+		<div class="wrapper">
+			<form>
+				<div class="cart-state mt">
+					<p>购物车状态<em id="gouwuchezhuangtai">（2/30）</em></p>
+					<div class="total"><input name="submitCart" value="去结算" type="submit"><span>总计（不含运费）：<em>&#165;</em><em class="total-cart-price">0</em></span></div>
+				</div>
+				
+				<div class="order-table">
+					<table width="100%">
+						<tbody>
+							<tr>
+								<th class="th-1"><label><input name="checkAllCart" value="1" checked="checked" type="checkbox">全选</label></th>
+								<th class="th-2">所选商品</th>
+								<th class="th-3">单价（元）</th>
+								<th class="th-4">数量</th>
+								<th class="th-5">优惠</th>
+								<th class="th-6">小计（元）</th>
+								<th class="th-7">操作</th>
+							</tr>
+							<tr id="merchant_188509">
+							<td colspan="7" class=" store-infor clearfix">
+									<div class="shopname">
+										<input name="merchantId[]" rel="forshop" value="188509" checked="checked" type="checkbox">店铺：
+										<a href="#" target="_blank">普城外设</a>
+									</div>
+									<div class="contact">
+										<a class="tag-security" style="margin: 0 -9px 0 0">&nbsp;</a>
+									</div>
+									<div class="contact">
+
+										<a target="_blank" href="#"><img src="imgs/cart/pa.jpg" alt="点击这里给我发消息" title="点击这里给我发消息" border="0"></a>
+									</div>
+								</td>
+							
+							</tr>
+							<tr>
+								<td class="offer-detail" colspan="7">
+									<div class="total">
+										<span class="type">满就减</span> 商品金额已满
+										<em>100.00</em> 元，立减
+										<em>5.00</em> 元
+									</div>
+								</td>
+							</tr>
+							<!--第一个商品-->
+							<tr rel="goods-order" id="cart_2549552">
+								<td colspan="2" class="s-infor">
+									<input value="2549552" item="item" rel="foritem" merchantid="188509" checked="checked" type="checkbox">
+									<a href="#" class="pic" target="_blank"><img src="imgs/cart/luoji.jpg" height="60" width="80"></a>
+									<div class="inforbox">
+										<h3 class="tit"><a href="#" title="Logitech/罗技 G440硬质鼠标垫 G500S/G700S/G600/G502专用" target="_blank">Logitech/罗技 G440硬质鼠标垫 G500S/G700S/G600/G502专用</a></h3>
+										<div class="security clearfix">
+											<a href="#l" title="7天退换货" class="security-a" target="_blank"></a>
+											<a href="#" title="真实报价" class="security-d" target="_blank"></a>
+											<a href="#l" title="先行赔付" class="" target="_blank"></a>
+										</div>
+
+									</div>
+								</td>
+								
+								<td class="s-price ">
+									<em>199</em>
+
+								</td>
+								
+								<td class="s-amount ">
+									<div class="buy-num">
+										<a class="minus" href="javascript:void(0)" title="减一">-</a>
+										<input autocomplete="off" class="text-amount" value="1" id="cartNumber_2549552" type="text">
+										<a class="plus" href="javascript:void(0)" title="加一">+</a>
+										<div class="tips-2" id="tips_2549552" style="display:none;"></div>
+									</div>
+								</td>
+								
+								<td class="s-agio">
+									<div>&#8722;&#8722;</div>
+
+								</td>
+								
+								<td class="s-total">
+									<em id="cartGoodsPcie_2549552">199</em>
+								</td>
+								
+								<td class="s-del">
+									<div class="s-delbox">
+										<a href="javascript:void(0)" title="移入收藏夹">移入收藏夹</a>
+										<a href="javascript:void(0)">删除</a>
+										<div class="deletebox" style="display:none;" id="zp-cart-2549552">
+											<p>确认要删除该商品吗？</p>
+											<a href="javascript:void(0)">是的</a>
+											<a href="javascript:void(0)">取消</a> <i></i>
+										</div>
+									</div>
+								</td>
+							</tr>
+							
+							<tr rel="goods-order" id="cart_2549550">
+								<td colspan="2" class="s-infor">
+									<input name="cartId[]" value="2549550" item="item" rel="foritem" merchantid="188509" checked="checked" type="checkbox">
+									<a href="#" alt="罗技G502RGB版竞技有线游戏LOL鼠标多彩炫光呼吸灯可编程罗技G502游戏鼠标 带呼吸灯可自由配重 LOL游戏鼠" height="60" width="80"></a>
+									<div class="inforbox">
+										<h3 class="tit"><a href="#" title="罗技G502RGB版竞技有线游戏LOL鼠标多彩炫光呼吸灯可编程罗技G502游戏鼠标 带呼吸灯可自由配重 LOL游戏鼠" target="_blank">罗技G502RGB版竞技有线游戏LOL鼠标多彩炫光呼吸灯可编程罗技G502游戏鼠标 带呼吸灯可自由配重 LOL游戏鼠</a></h3>
+										<div class="security clearfix">
+											<a href="#" title="7天退换货" class="security-a" target="_blank"></a>
+											<a href="#" title="真实报价" class="security-d" target="_blank"></a>
+											<a href="#" title="先行赔付" class="" target="_blank"></a>
+										</div>
+
+									</div>
+								</td>
+								<td class="s-price ">
+									<!--<em class="s-old-price">449</em>-->
+									<em>368</em>
+								<!--	<em class="limit-price">省81元</em>-->
+
+								</td>
+								<td class="s-amount ">
+									<div class="buy-num">
+										<a class="minus" href="javascript:void(0)" title="减一" onclick="$.updateCartnumber({cartId:'2549550', maxNumber:'5', updateType:'minus', costNumber:'3', merchantId:'188509'})">-</a>
+										<input autocomplete="off" class="text-amount" value="3" onblur="$.updateCartnumber({cartId:'2549550', maxNumber:'5',updateType:'change', costNumber:'3', merchantId:'188509'})" id="cartNumber_2549550" type="text">
+										<a class="plus" href="javascript:void(0)" title="加一" onclick="$.updateCartnumber({cartId:'2549550', maxNumber:'5',updateType:'plus', costNumber:'3', merchantId:'188509'})">+</a>
+										<div class="tips-2" id="tips_2549550" style="display:none;"></div>
+									</div>
+								</td>
+								<td class="s-agio">
+
+									<div class="agio-limit">
+										限时抢购
+										<div class="remaining-time" style="display:none;">
+											<p>限时抢购 优惠81元</p>
+
+											<p>剩余：168小时16分59秒</p>
+											<i></i>
+										</div>
+									</div>
+
+								</td>
+								<td class="s-total">
+									<em id="cartGoodsPcie_2549550">1104</em>
+								</td>
+								<td class="s-del">
+									<div class="s-delbox">
+										<a href="javascript:void(0)" title="移入收藏夹" onclick="$.deleteCart({cartId:'2549550', deleteType:'collect'})">移入收藏夹</a>
+										<a href="javascript:void(0)" onclick="$.deleteCart({cartId:'2549550'})">删除</a>
+										<div class="deletebox" style="display:none;" id="zp-cart-2549550">
+											<p>确认要删除该商品吗？</p>
+											<a href="javascript:void(0)" onclick="$.deleteCart({cartId:'2549550', deleteType:'delete'})">是的</a>
+											<a href="javascript:void(0)" onclick="$.closeDeleteCart({cartId:'2549550'})">取消</a> <i></i>
+										</div>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					
+					</table>
+					
+				<div class="total-price">商品总价<span>（不含运费）</span>：<em>&#165;</em><em class="total-cart-price">0</em></div>
+				<div class="order-foot clearfix">
+						<label><input name="checkAllCart" value="1" checked="checked" type="checkbox">全选</label>
+						<a href="javascript:void(0)" onclick="$.deleteAll()">批量删除</a>
+
+						<a href="#" class="go-shopping">&lt;&lt;继续购物</a>
+						<input value="去结算" name="submitCart" class="accounting-btn" type="submit">
+					</div>
+				
+				</div>
+			</form>
+
+		</div>
+	<!--猜你喜欢-->	
+		<div class="wrapper" id="zp-goods-recommend">
+			<div class="modgoods mt20">
+				<ul class="modgoods-tab clearfix">
+					<li class="cur">猜你喜欢</li>
+				
+				</ul>
+				<div class="modgoods-tabbox">
+					<ul class="modgoods-list clearfix" style="display:block;">
+						<li>
+							<a class="pic" href="#" title="包邮+ 办公 B40-45（E1-6010 4G 500G DVD刻录机 *行货" target="_blank"><img src="imgs/cart/cainixihuan.jpg" alt="包邮+ 办公 B40-45（E1-6010 4G 500G DVD刻录机 *行货" height="120" width="160"><span>包邮+ 办公 B40-45（E1-6010 4G 500G DVD刻录机 *行货</span></a>
+							<div class="price">&#165;2099.00</div>
+						</li>
+						<li>
+							<a class="pic" href="#" title="【包邮】罗技 G602无线游戏鼠标，2.4G无线连接 专属追踪技术 6个拇指按键， 无线角色扮演网游鼠标" target="_blank"><img src="imgs/cart/cainixihuan.jpg" alt="【包邮】罗技 G602无线游戏鼠标，2.4G无线连接 专属追踪技术 6个拇指按键， 无线角色扮演网游鼠标" height="120" width="160"><span>【包邮】罗技 G602无线游戏鼠标，2.4G无线连接 专属追踪技术 6个拇指按键， 无线角色扮演网游鼠标</span></a>
+							<div class="price">&#165;388.00</div>
+						</li>
+						<li>
+							<a class="pic" href="#" title="【包邮】雷蛇Razer 炼狱蝰蛇(左手版)鼠标雷蛇炼狱蝰蛇左手版电脑有线游戏鼠标Razer Deathadder Left-hand 黑色 人性化设计 左手" target="_blank"><img src="imgs/cart/cainixihuan.jpg" alt="【包邮】雷蛇Razer 炼狱蝰蛇(左手版)鼠标雷蛇炼狱蝰蛇左手版电脑有线游戏鼠标Razer Deathadder Left-hand 黑色 人性化设计 左手" height="120" width="160"><span>【包邮】雷蛇Razer 炼狱蝰蛇(左手版)鼠标雷蛇炼狱蝰蛇左手版电脑有线游戏鼠标Razer Deathadder Left-hand 黑色 人性化设计 左手</span></a>
+							<div class="price">&#165;289.00</div>
+						</li>
+						<li>
+							<a class="pic" href="#" title="三星 S27D360H  27英寸LED背光液晶显示器,VGA HDMI双接口PLS广视角面板,底座可倾斜,外观时尚靓丽" target="_blank"><img src="imgs/cart/cainixihuan.jpg" alt="三星 S27D360H  27英寸LED背光液晶显示器,VGA HDMI双接口PLS广视角面板,底座可倾斜,外观时尚靓丽" height="120" width="160"><span>三星 S27D360H  27英寸LED背光液晶显示器,VGA HDMI双接口PLS广视角面板,底座可倾斜,外观时尚靓丽</span></a>
+							<div class="price">&#165;1288.00</div>
+						</li>
+						<li>
+							<a class="pic" href="#" title="三星 GALAXY S6（G9200/全网通/全新原装/昆明本地商家）" target="_blank"><img src="imgs/cart/cainixihuan.jpg" alt="三星 GALAXY S6（G9200/全网通/全新原装/昆明本地商家）" height="120" width="160"><span>三星 GALAXY S6（G9200/全网通/全新原装/昆明本地商家）</span></a>
+							<div class="price">&#165;3399.00</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<!--尾部-->
+		<div class="footer">
+			<p class="links">
+				<a target="_blank" href="#">关于商城</a>|
+				<a target="_blank" href="#">营销中心</a>|
+				<a target="_blank" href="#">服务中心</a>|
+				<a target="_blank" href="#">联系我们</a>|
+				<a target="_blank" href="#">发展历程</a>|
+				<a target="_blank" href="#">媒体报道</a>
+			</p>
+			<p><span class="copyright">&#169;2016中关村在线 版权所有. 京ICP备09041801号-182 <a target="_blank" href="#">京ICP证010391号</a></span></p>
+			<div class="authentication">
+				<a target="_blank" href="#"><img alt="经营性网站备案信息" src="imgs/cart/beian.png" height="40" width="108"></a>
+				<a target="_blank" href="#"><img alt="海淀网络警察提醒您" src="imgs/cart/beian.png" height="40" width="108"></a>
+				<a target="_blank" href="#" id="___szfw_logo___"><img src="imgs/cart/beian.png"></a>
+				
+			</div>
+
+		</div>
+		<!---->
+				<!--购物车模板-->
+		<script type="text/html" id="cart-moban">	
+		<tr rel="goods-order">
+			<td colspan="2" class="s-infor">
+									<input value="2549552" item="item" rel="foritem" merchantid="188509" checked="checked" type="checkbox">
+									<a href="#" class="pic" target="_blank"><img src="imgs/cart/luoji.jpg" height="60" width="80"></a>
+									<div class="inforbox">
+										<h3 class="tit"><a href="#" title="Logitech/罗技 G440硬质鼠标垫 G500S/G700S/G600/G502专用" target="_blank">{{jieshao}}</a></h3>
+										<div class="security clearfix">
+											<a href="#l" title="7天退换货" class="security-a" target="_blank"></a>
+											<a href="#" title="真实报价" class="security-d" target="_blank"></a>
+											<a href="#l" title="先行赔付" class="" target="_blank"></a>
+										</div>
+
+									</div>
+								</td>
+						
+						<td class="s-price ">
+									<em>{{price}}</em>
+
+								</td>
+								
+								<td class="s-amount ">
+									<div class="buy-num">
+										<a class="minus" href="javascript:void(0)" title="减一">-</a>
+										<input autocomplete="off" class="text-amount" value="1" id="cartNumber_2549552" type="text">
+										<a class="plus" href="javascript:void(0)" title="加一">+</a>
+										<div class="tips-2" id="tips_2549552" style="display:none;"></div>
+									</div>
+								</td>
+								
+								<td class="s-agio">
+									<div>&#8722;&#8722;</div>
+
+								</td>
+								
+								<td class="s-total">
+									<em id="cartGoodsPcie_2549552">199</em>
+								</td>
+								
+								<td class="s-del">
+									<div class="s-delbox">
+										<a href="javascript:void(0)" title="移入收藏夹">移入收藏夹</a>
+										<a href="javascript:void(0)">删除</a>
+										<div class="deletebox" style="display:none;" id="zp-cart-2549552">
+											<p>确认要删除该商品吗？</p>
+											<a href="javascript:void(0)">是的</a>
+											<a href="javascript:void(0)">取消</a> <i></i>
+										</div>
+									</div>
+								</td>
+			
+		</tr>
+	</script>
+
+
+		<script>
+	
+		$.get('../../data/users.json',function(data){
+			var len = data.length;
+			for(var i=0;i<len; i++){
+				createoneTr(data[i])
+			}
+		});
+			
+		function createoneTr(data){
+			var tpl = $('#cart-moban').html();
+			var htmlStr = tpl.replace('{{price}}',data.password).replace('{{jieshao}}',data.user)
+			var $oneTr = $(htmlStr)
+			$('tbody').append($oneTr)
+		}
+			
+		</script>
+		
+		
+		
+	</body>
+	<script src="js/zol.js"></script>
+	<script src="js/cart.js"></script>
+</html>

@@ -1,0 +1,33 @@
+[
+	{
+		"href": "#",
+		"src1": "imgs/G520_imgs/lis1.jpg",
+		"title": "魅族 MX6 (全网通)",
+		"price": "132"
+	}, {
+		"href": "#",
+		"src": "imgs/mobile3.png",
+"title": "魅族 MX6 (全网通)",
+		"price": "132"
+	}, {
+		"href": "#",
+		"src": "imgs/mobile4.jpg",
+"title": "魅族 MX6 (全网通)",
+		"price": "132"
+	}, {
+		"href": "#",
+		"src": "imgs/mobile5.jpg",
+"title": "魅族 MX6 (全网通)",
+		"price": "132"
+	}, {
+		"href": "#",
+		"src": "imgs/mobile6.jpg",
+	"title": "魅族 MX6 (全网通)",
+		"price": "132"
+	}, {		
+		"href": "#",
+		"src": "imgs/mobile7.jpg",
+"title": "魅族 MX6 (全网通)",
+		"price": "132"
+	}
+]

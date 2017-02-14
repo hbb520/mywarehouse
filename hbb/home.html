@@ -1,0 +1,469 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>黄彬彬的简历</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/app.css" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<script src="js/echarts-all.js"></script>
+		<script src="js/jquery-1.12.1.js"></script>
+		<style>
+			h5 {
+				margin-top: 30px;
+				font-weight: bold;
+			}
+			
+			h5:first-child {
+				margin-top: 15px;
+			}
+		</style>
+	</head>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			font-family: "微软雅黑";
+		}
+		/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+		
+		body {
+			padding-top: 55px;
+			padding-bottom: 60px;
+		}
+		
+		::-webkit-scrollbar {
+			width: 3px;
+			height: 3px;
+			background-color: #F5F5F5;
+		}
+		/*定义滚动条轨道 内阴影+圆角*/
+		
+		::-webkit-scrollbar-track {
+			-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+			border-radius: 10px;
+			background-color: #F5F5F5;
+		}
+		/*定义滑块 内阴影+圆角*/
+		
+		::-webkit-scrollbar-thumb {
+			border-radius: 10px;
+			-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+			background-color: #555;
+		}
+		
+		.container {
+			color: #ff0077
+		}
+		
+		.mui-title {
+			color: #ff0077
+		}
+		
+		.container {
+			position: relative;
+			height: 100%;
+		}
+		
+		table tr {
+			height: 30px;
+		}
+		
+		table tr td:nth-child(1) {
+			width: 40%;
+			text-align: center;
+		}
+	</style>
+
+	<body>
+		<!--我-->
+		<div id="my" class="mui-control-content mui-active">
+			<header class="mui-bar mui-bar-nav">
+				<h1 class="mui-title">我的详情</h1>
+			</header>
+			<div class="container">
+				<div id="slider" class="mui-slider">
+					<div class="mui-slider-group mui-slider-loop">
+						<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+						<div class="mui-slider-item mui-slider-item-duplicate">
+							<a href="#">
+								<img src="images/l2.png" style="width: 100%;height: 130px;">
+							</a>
+						</div>
+						<!-- 第一张 -->
+						<div class="mui-slider-item">
+							<a href="#">
+								<img src="images/l2.png" style="width: 100%;height: 130px;">
+							</a>
+						</div>
+						<!-- 第二张 -->
+						<div class="mui-slider-item">
+							<a href="#">
+								<img src="images/l7.jpg" style="width: 100%;height: 130px;">
+							</a>
+						</div>
+						<!-- 第三张 -->
+						<div class="mui-slider-item">
+							<a href="#">
+								<img src="images/l8.jpg" style="width: 100%;height: 130px;">
+							</a>
+						</div>
+						<!-- 第四张 -->
+						<div class="mui-slider-item">
+							<a href="#">
+								<img src="images/l5.png" style="width: 100%;height: 130px;">
+							</a>
+						</div>
+						<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+						<div class="mui-slider-item mui-slider-item-duplicate">
+							<a href="#">
+								<img src="images/l4.png" style="width: 100%;height: 130px;">
+							</a>
+						</div>
+					</div>
+					<div class="mui-slider-indicator">
+						<div class="mui-indicator mui-active"></div>
+						<div class="mui-indicator"></div>
+						<div class="mui-indicator"></div>
+						<div class="mui-indicator"></div>
+					</div>
+				</div>
+
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="images/l12.jpg">
+							<div class="mui-media-body">
+								姓名
+								<p class='mui-ellipsis'>黄彬彬</p>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="images/l12.jpg">
+							<div class="mui-media-body">
+								联系方式
+								<p class='mui-ellipsis'>13600549583</p>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="images/l12.jpg">
+							<div class="mui-media-body">
+								性别
+								<p class='mui-ellipsis'>男</p>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="images/l12.jpg">
+							<div class="mui-media-body">
+								工作年限
+								<p class='mui-ellipsis'>web前端开发实际1年半,工作年限3年</p>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="images/l12.jpg">
+							<div class="mui-media-body">
+								年龄
+								<p class='mui-ellipsis'>本命年...</p>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="images/l12.jpg">
+							<div class="mui-media-body">
+								目前状态
+								<p class='mui-ellipsis'>已离职身在杭州可立即上岗</p>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="images/l12.jpg">
+							<div class="mui-media-body">
+								毕业院校
+								<p class='mui-ellipsis'>河南工学院 专科</p>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="images/l12.jpg">
+							<div class="mui-media-body">
+								邮箱
+								<p class='mui-ellipsis'>huangbinbin92@163.com</p>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="images/l12.jpg">
+							<div class="mui-media-body">
+								期望薪资
+								<p class='mui-ellipsis'>面议</p>
+							</div>
+						</a>
+					</li>
+
+				</ul>
+
+			</div>
+		</div>
+
+		<!--技能-->
+		<div id="skill" class="mui-control-content">
+			<header class="mui-bar mui-bar-nav">
+				<h1 class="mui-title">我的技能</h1>
+			</header>
+			<div class="container">
+				<h5>自我评价</h5>
+				<div id="myskill" style="width:400px;height:250px"></div>
+				<h5>前端语言</h5>
+				<div id="myframe" style="width:400px;height:200px"></div>
+				<h5>前端框架</h5>
+				<div id="myserver" style="width:400px;height:350px"></div>
+				<h5>工具软件</h5>
+				<div id="mytool" style="width:400px;height:250px"></div>
+			</div>
+		</div>
+		<script>
+			var myChart1 = echarts.init(document.getElementById('myskill'));
+
+			myChart1.setOption({
+				tooltip: {
+					trigger: 'axis',
+					axisPointer: {
+						type: 'shadow'
+					}
+				},
+				grid: {
+					left: '3%',
+					right: '4%',
+					bottom: '3%',
+					containLabel: true
+				},
+				xAxis: {
+					type: 'value',
+					boundaryGap: [0, 0.01]
+				},
+				yAxis: {
+					type: 'category',
+					data: ['个人信心', '自学能力', '团队', '技能', '工作态度']
+				},
+				series: [{
+
+					type: 'bar',
+					data: [80, 80, 90, 80, 100]
+				}]
+			})
+			var myChart2 = echarts.init(document.getElementById('myframe'));
+
+			myChart2.setOption({
+				tooltip: {
+					trigger: 'axis',
+					axisPointer: {
+						type: 'shadow'
+					}
+				},
+				grid: {
+					left: '3%',
+					right: '4%',
+					bottom: '3%',
+					containLabel: true
+				},
+				xAxis: {
+					type: 'value',
+					boundaryGap: [0, 0.01]
+				},
+				yAxis: {
+					type: 'category',
+					data: ['html5', 'css3', 'javaScript', 'sass']
+				},
+				series: [{
+
+					type: 'bar',
+					data: [80, 80, 90, 80]
+				}]
+			})
+
+			var myChart3 = echarts.init(document.getElementById('myserver'));
+
+			myChart3.setOption({
+				tooltip: {
+					trigger: 'axis',
+					axisPointer: {
+						type: 'shadow'
+					}
+				},
+				grid: {
+					left: '3%',
+					right: '4%',
+					bottom: '3%',
+					containLabel: true
+				},
+				xAxis: {
+					type: 'value',
+					boundaryGap: [0, 0.01]
+				},
+				yAxis: {
+					type: 'category',
+					data: ['jQuery', 'bootstrap', 'swiper', 'animate.css', 'jQquery-Mobile', 'echarts', 'angular.js', 'react', 'MUI']
+				},
+				series: [{
+
+					type: 'bar',
+					data: [80, 80, 80, 80, 70, 70, 30, 30, 70]
+				}]
+			})
+
+			var myChart4 = echarts.init(document.getElementById('mytool'));
+
+			myChart4.setOption({
+				tooltip: {
+					trigger: 'axis',
+					axisPointer: {
+						type: 'shadow'
+					}
+				},
+				grid: {
+					left: '3%',
+					right: '4%',
+					bottom: '3%',
+					containLabel: true
+				},
+				xAxis: {
+					type: 'value',
+					boundaryGap: [0, 0.01]
+				},
+				yAxis: {
+					type: 'category',
+					data: ['Hbuilder', 'svn', 'gulp,webpack', 'photoshop', 'xMind']
+				},
+				series: [{
+
+					type: 'bar',
+					data: [90, 70, 60, 80, 70]
+				}]
+			})
+		</script>
+		<!--经历-->
+		<div id="experience" class="mui-control-content">
+			<header class="mui-bar mui-bar-nav">
+				<h1 class="mui-title">我的经历</h1>
+			</header>
+			<div class="container">
+				<div class="title">
+					郑州千鹏网络科技有限公司
+				</div>
+				<ul class="mui-table-view" style="font-size: 12px;">
+					<li class="mui-table-view-cell">使用html css进行Web端及移动端的网页框架搭建,内容制作</li>
+					<li class="mui-table-view-cell">使用js,jquery,ajax等实现页面及交互</li>
+					<li class="mui-table-view-cell">熟练使用HTML5和CSS3新技术,创建界面友好,符合标准,跨平台的应用</li>
+					<li class="mui-table-view-cell">页面通过标准校验，兼容各主流浏览器,以及BUG的调试</li>
+					<li class="mui-table-view-cell">优化现有的功能和体验细节</li>
+                    <li class="mui-table-view-cell"> 与后台工程师协作,完成数据交互,界面展示,并保证设备的兼容性</li>
+					<li class="mui-table-view-cell">和客户沟通做需求文档</li>
+					<li class="mui-table-view-cell">学习前端技术</li>
+                    
+                   
+				</ul>
+				<div class="title">
+					许昌裕同包装有限公司
+				</div>
+				<ul class="mui-table-view" style="font-size: 12px;">
+					<li class="mui-table-view-cell">进行PLC编程</li>
+				</ul>
+			</div>
+		</div>
+		<!--展示-->
+		<div id="show" class="mui-control-content">
+			<header class="mui-bar mui-bar-nav">
+				<h1 class="mui-title">我的项目展示</h1>
+			</header>
+			<div class="container">
+				
+				<div class="mui-card">
+				<div class="mui-card-header mui-card-media" style="height:300px;background-image:url(images/pic1.jpg)"></div>
+				<div class="mui-card-content">
+					<div class="mui-card-content-inner">
+						
+						<p style="color: #333;">这是一个河南省济源市电商型网站,这是一个团体项目,自己实现主页,商品详情,购物车等页面渲染及交互...</p>
+					</div>
+				</div>
+				<div class="mui-card-footer">
+					<a class="mui-card-link">Like</a>
+					<a class="mui-card-link">Read more</a>
+				</div>
+			</div>
+			
+			<div class="mui-card">
+				<div class="mui-card-header mui-card-media" style="height:300px;background-image:url(images/jd.jpg)"></div>
+				<div class="mui-card-content">
+					<div class="mui-card-content-inner">
+						
+						<p style="color: #333;">该项目是一个企业网站...</p>
+					</div>
+				</div>
+				<div class="mui-card-footer">
+					<a class="mui-card-link">Like</a>
+					<a class="mui-card-link">Read more</a>
+				</div>
+			</div>
+			
+			<div class="mui-card">
+				<div class="mui-card-header mui-card-media" style="height:300px;background-image:url(images/zol.jpg)"></div>
+				<div class="mui-card-content">
+					<div class="mui-card-content-inner">
+						
+						<p style="color: #333;">这是个类中关村电商网站...</p>
+					</div>
+				</div>
+				<div class="mui-card-footer">
+					<a class="mui-card-link">Like</a>
+					<a class="mui-card-link">Read more</a>
+				</div>
+			</div>
+			
+			
+			</div>
+		</div>
+		<!--底部选项卡-->
+		<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item mui-active" href="#my">
+				<span class="mui-icon mui-icon-person"></span>
+				<span class="mui-tab-label">我</span>
+			</a>
+			<a class="mui-tab-item" href="#skill">
+				<span class="mui-icon mui-icon-gear-filled"></span>
+				<span class="mui-tab-label">技能</span>
+			</a>
+			<a class="mui-tab-item" href="#experience">
+				<span class="mui-icon mui-icon-location"></span>
+				<span class="mui-tab-label">经历</span>
+			</a>
+			<a class="mui-tab-item" href="#show">
+				<span class="mui-icon mui-icon-map"></span>
+				<span class="mui-tab-label">展示</span>
+			</a>
+		</nav>
+
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+			var slider = mui("#slider");
+
+			slider.slider({
+				interval: 2000
+			});
+		</script>
+	</body>
+
+</html>

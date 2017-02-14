@@ -1,0 +1,304 @@
+@charset "utf-8";
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+th,
+td,
+p,
+blockquote,
+pre,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+hr {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font: 12px/1.5 Arial;
+    color: #666;
+}
+select,
+input,
+button {
+    vertical-align: middle;
+    font-size: 100%;
+}
+ul,
+ol {
+    list-style: none;
+}
+fieldset,
+img {
+    border: 0;
+}
+a {
+    text-decoration: none;
+    color: #666;
+}
+a:hover {
+    color: red;
+    text-decoration: underline;
+}
+/**********顶部***********/
+.top {
+    width: 990px;
+    margin: 0 auto;
+    overflow: hidden;
+    .header {
+        padding: 20px 0;
+        overflow: hidden;
+        .register-bar {
+            float: right;
+            padding: 21px 0 0;
+            font-size: 14px;
+            line-height: 22px;
+            width: 220px;
+            a {
+                float: right;
+                height: 16px;
+                padding: 3px 10px;
+                color: #c00;
+                font: normal 14px/14px "Microsoft YaHei", "\5FAE\8F6F\96C5\9ED1";
+            }
+            a:hover {
+                color: #fff;
+                background-color: #cd1f1f;
+            }
+        }
+        img {
+            float: left;
+            border: 0;
+        }
+        p {
+            float: left;
+            margin: 8px 0 0 8px;
+            padding-left: 10px;
+            font: 14px/44px simsun;
+            color: #666;
+            border-left: 1px solid #e6e6e6;
+            cursor: pointer;
+        }
+    }
+}
+
+
+/************中*************/
+#J_loginForm{
+    overflow: hidden;
+    width:990px;
+    margin: 0 auto;
+    .login-wrap {
+    
+    margin-top: 26px;
+    margin: 30px 0 0;
+    border: 1px solid #e6e6e6;
+    background: #fff;
+      .ad-div {
+            float: left;
+        }
+    .login-layer {
+            float: right;
+            padding: 0 85px 0 0;
+            width: 290px;
+            .login-head {
+                position: relative;
+                padding: 20px 0 0;
+                .otherLogin-bar{
+                    float: right;
+                    padding: 0 0 0 17px;
+                    background: url(../imgs/login/bg.png) no-repeat -280px -113px;              
+                    line-height: 28px;
+                 
+                }
+                 h3 {
+                    height: 28px;
+                    overflow: hidden;
+                    font: 18px/28px "Microsoft YaHei", "\5FAE\8F6F\96C5\9ED1";
+                    color: #666;
+                }
+            }
+         .login-content {
+            padding: 30px 0 0;
+            position: relative;
+//          .username {
+//              z-index: 2;
+//              margin: 0 0 10px;
+//          }
+            .login-wrong-tips {
+                position: absolute;
+                top: 1px;
+                left: 0;
+                padding: 0 0 0 25px;
+                width: 263px;
+                height: 22px;
+                font: 12px/22px "Arial";
+                color: #f33;
+                border: 1px solid #f99;
+                background-color: #fff2f2;
+                background: url(../imgs/login/bg.png) no-repeat;
+                background-position: -270px -89px;
+            }
+            .form-item {
+                position: relative;
+                margin: 0 0 7px;
+                padding: 8px 5px;
+                height: 22px;
+                border: 1px solid #ccc;
+                .text {
+                    display: block;
+                    width: 278px;
+                    height: 22px;
+                    font: 14px/22px "Arial";
+                    border: 0 none;
+                }
+                .remove {
+                    position: absolute;
+                    top: 9px;
+                    right: 6px;
+                    width: 21px;
+                    height: 21px;
+                    background: url(../imgs/login/bg.png) no-repeat;
+                    background-position: -157px -107px;
+                    cursor: pointer;
+                }
+                .case-tips {
+                    position: absolute;
+                    top: 26px;
+                    left: 30px;
+                    padding: 0 10px;
+                    border: 1px solid #ffd24c;
+                    background: #fff5d6;
+                    font: 12px/28px "Arial";
+                    color: #666;
+                  border-radius: 2px;
+          
+                }
+            }
+            .form-other {
+                padding: 0 0 17px;
+                overflow: hidden;
+                a {
+                    float: right;
+                }
+            }
+            
+            .login-layer-btn{
+                display: block;
+                margin: 0 0 10px;
+                width: 290px;
+                height: 40px;
+                font: bold 14px/40px "Arial";
+                color: #fff;
+                text-align: center;
+                border: 0 none;
+                background: url(../imgs/login/bg.png) no-repeat;
+                background-position: 0 0;
+            }
+            
+        }   
+           .login-foot {
+                margin: 15px 0 0;
+                span {
+                    float: left;
+                    font: 12px/38px "Arial";
+                    color: #666;
+                    padding: 0 2px 0 0;
+                    
+                }
+                a{
+                        float: left;
+                        margin: 0 12px 0 0;
+                        width: 38px;
+                        height: 38px;
+                        text-indent: -9999em;
+                        overflow: hidden;
+                        background: url(../imgs/login/bg.png) no-repeat;
+                    }
+                .sina {
+                    background-position: 0 -82px;
+                }
+                .sina:hover {
+                        background-position: 0 -121px;
+                    }
+                 .qq {
+                        background-position: -39px -82px;
+                    }
+                    .qq:hover {
+                        background-position: -39px -121px;
+                    }
+                    .alipay {
+                        background-position: -78px -82px;
+                    }
+                    .alipay:hover{
+                        background-position: -78px -121px;
+                    }
+                    .baidu {
+                        background-position: -117px -82px;
+                    }
+                    .baidu:hover{
+                        background-position: -117px -121px;
+                    }
+            } 
+            
+            
+        }
+    
+    
+    
+}
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**********底部***********/
+.footer {
+    margin: 50px 0 0;
+    padding: 12px 0 25px;
+    border-top: 1px solid #dcdcdc;
+    .copy {
+        width: 990px;
+        margin: 0 auto;
+        .about {
+            float: left;
+            margin: 0 0 0 -10px;
+            color: #ccc;
+            a {
+                margin: 0 10px;
+                color: #666;
+            }
+            a:hover {
+                color: red;
+            }
+        }
+        .copyright {
+            float: right;
+            color: #666;
+        }
+    }
+}

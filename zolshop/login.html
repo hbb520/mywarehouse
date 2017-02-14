@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>登录</title>
+		<script src="js/jquery-1.12.1.js"></script>
+		<link href="css/login.css" rel="stylesheet" />
+		
+		
+	</head>
+	<body>
+		<!--顶部-->
+		
+			<div class="top">
+			<div class="header">
+				
+				<div class="register-bar">
+					<a href="register.html">立即注册</a>还没有有ZOL商城账号？</div>
+
+				<div class="logo">
+
+					<a title="ZOL商城" href="zolshop.html">
+						<img title="ZOL商城" alt="ZOL商城" src="imgs/register/shop_182x60.png" height="60" width="182">
+						<p>中关村在线旗下网上商城</p>
+					</a>
+				</div>
+			</div>
+	
+		</div>
+		
+		
+		
+		<!--中-->
+		<form id="J_loginForm" action="javascript:void(0)">
+				<div class="login-wrap clearfix">
+					<div class="ad-div">
+						<div>
+							<a href="#" target="_blank"><img src="imgs/login/login.jpg" alt="" height="350" width="520"></a>
+						</div>
+					</div>
+					<div class="login-layer">
+						<div class="login-head">
+							<a href="javascript:void(0)" class="otherLogin-bar mobileLogin-bar" rel="J_phone">手机动态码登录</a>
+							<h3>登录ZOL商城</h3>
+						</div>
+						<div class="login-content" id="J_login_common">
+							<div class="login-wrong-tips" id="J_login-wrong-tips" style="display:none;"></div>
+							<div class="form-item username">
+								<input autocomplete="off" placeholder="手机号/邮箱/用户名" class="text" id="J_loginUser" name="zolShopUserName" maxlength="100" type="text">
+								<i class="remove" style="display:none;"></i>
+								<ul style="display:block;" class="account-list" id="J_accountList">
+								</ul>
+							</div>
+							<div class="form-item">
+								<input autocomplete="off" placeholder="密码" class="text" id="J_loginPsw" maxlength="20" type="password">
+								<i class="remove" style="display:none;"></i> <span class="case-tips" id="J_loginCapsLock" style="display: none;">大小写锁定已打开<i class="ico"></i></span> </div>
+							<div class="form-other">
+								<label class="autologon"><!--<input type="checkbox" name="" value="">记住登录状态--></label>
+								<a target="_blank" href="#">忘记密码？</a>
+							</div>
+							<input value="1" name="J_login_type" id="J_login_type" type="hidden">
+							<input value="登 录" class="login-layer-btn" id="J_loginBtn" type="button">
+							<span style="display:none;" class="submit-loading" id="J_loginingBtn">正在登录...</span>
+						</div>
+
+						<div class="login-content mobileLogin-content" id="J_login_mobile" style="display:none;">
+							<div class="login-wrong-tips" id="J_login-mobile-wrong-tips" style="display:none;">-</div>
+							<!-- add by hanjw 2014-6-24 -->
+							<div class="form-item ">
+								<input autocomplete="off" placeholder="手机号" class="text" id="J_login_mobile_number" name="J_login_mobile_number" type="text">
+							</div>
+							<div class="form-item captcha-item">
+								<input autocomplete="off" placeholder="图片验证码" class="text" id="J_login_mobile_picCode" name="picCode" maxlength="5" type="text">
+								<input name="J_login_mobile_token" id="J_login_mobile_token" value="865da6dd0e6c2879508c1defa60314cb" type="hidden">
+								<img src="%E7%99%BB%E5%BD%95-%20ZOL%E5%95%86%E5%9F%8E_files/captcha.png" alt="图片验证码" id="J_login_mobile_img" height="40" width="100">
+							</div>
+							<div class="form-item phone-number">
+								<input autocomplete="off" placeholder="短信验证码" class="text" id="J_login_mobile_code" name="J_login_mobile_code" type="text">
+								<input name="J_login_send_button" value="发送验证码" class="btn" id="J_login_send_button" type="button">
+								<span class="captcha-loading" id="J_login_send_wait" style="display: none">100秒后重新获取</span>
+							</div>
+							<!-- //add by hanjw 2014-6-24 -->
+							<input value="登 录" class="login-layer-btn" id="J_loginBtn_mobile" type="button">
+							<span style="display:none;" class="submit-loading" id="J_loginingBtn_mobie">正在登录...</span>
+						</div>
+
+						<div class="login-foot clearfix"><span>合作账号登录：</span>
+							<a target="_blank" class="sina" href="#">用微博账号登录</a>
+							<a target="_blank" class="qq" href="#">用QQ账号登录</a>
+							<a target="_blank" class="alipay" href="#">用支付宝账号登录</a>
+							<a target="_blank" class="baidu" href="#">用百度账号</a>
+						</div>
+					</div>
+				</div>
+			</form>
+		
+		
+		<!--底部-->
+		<div class="footer">
+				<div class="copy">
+					    <div class="about"><a href="#" target="_blank">关于ZOL商城</a>|<a href="#" target="_blank">联系我们</a>|<a href="#" target="_blank">帮助中心</a></div>
+        <div class="copyright">&#169;</script>2016. 中关村在线 版权所有</div>
+    </div>
+			
+		</div>
+		<script>
+			$(document).ready(function(){
+				//选中加上红色边框
+				$(":input").focus(function(){
+					$(this).parent().css("border-color","#CC0000");	
+				}).blur(function(){
+					$(this).parent().css("border-color","#CCC")
+				})
+				
+				//手机号验证
+				var checkMoblie = function(){
+					var flag = false;
+					if(mobile){
+						var regPartton = new RegExp(/1[3-8]+\d{9}/);
+						if(regPartton.test(mobile)){
+							flag = true;
+						}
+					}
+					return flag;
+					
+				}
+				//检测键盘大小写 暂时不处理组合键
+				$('#J_loginPsw').bind("keypress",function(event){
+					var event = event || window.event;
+					var keyCode = event.keyCode || event.which;			
+					if(keyCode >= 65 && keyCode <= 90) {
+						$("#J_loginCapsLock").show();
+					} else {
+						$("#J_loginCapsLock").hide();
+					}
+				})
+				
+				
+				
+				
+				//Ajax
+				$('.login-layer-btn').click(function(){
+					
+					var user = $('#J_loginUser').val();
+					var psw = $('#J_loginPsw').val();
+					
+					$.ajax({
+						type:'get',
+						url:'http://datainfo.duapp.com/shopdata/userinfo.php',
+						data:{
+							status:'login',
+							userID:user,
+							password:psw
+						},
+						success:function(data){
+							
+								location.href = 'zolshop.html'
+							
+						},
+						error:function(){
+							alert('出现了错误')
+						}
+					})
+					
+					
+					
+				})
+				$('#J_loginUser,#J_loginPsw').focus(function () {
+					
+                    $('#J_login-wrong-tips').hide();
+                })
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			})
+		</script>
+	</body>
+</html>

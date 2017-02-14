@@ -1,0 +1,997 @@
+@charset "utf-8";
+.zs-wrapper {
+    width: 1200px;
+    margin: 0 auto;
+    .zs-title {
+        height: 32px;
+        a {
+            margin: 0 8px;
+            line-height: 32px;
+        }
+        span {
+            margin-left: 8px;
+        }
+    }
+    .zs-inner {
+        border: 1px solid #EDEDED;
+        overflow: hidden;
+        .inner-left {
+            float: left;
+            width: 1000px;
+            .zs-focus {
+                float: left;
+                padding: 10px 0 0 20px;
+                width: 380px;
+                position: relative;
+                z-index: 8;
+                .zs-big-pic {
+                    a {
+                        cursor: crosshair;
+                        position: relative;
+                        display: block;
+                        outline: 0 none;
+                        text-decoration: none;
+                        width: 400px;
+                        -moz-user-select: none;
+                        .MagicZoomPup {
+                            background: red;
+                            z-index: 10;
+                            position: absolute;
+                            opacity: 0.5;
+                            width: 198.5px;
+                            height: 198.5px;
+                            left: 201.5px;
+                            top: 0;
+                            display: none;
+                        }
+                    }
+                }
+                #zoom1-big {
+                    width: 400px;
+                    height: 400px;
+                    position: absolute;
+                    top: 10px;
+                    left: 445px;
+                    overflow: hidden;
+                    display: none;
+                    border: 1px solid #ddd;
+                    background-color:red;
+                }
+                .zs-focus-thumb {
+                    position: relative;
+                    .zs-focus-list {
+                        position: relative;
+                        height: 70px;
+                        overflow: hidden;
+                        width: 400px;
+                        ul {
+                            width: 415px;
+                            padding: 0 0 0 1px;
+                            overflow: hidden;
+                            li {
+                                cursor: pointer;
+                                float: left;
+                                width: 70px;
+                                height: 70px;
+                                margin: 0 12px 0 0;
+                                position: relative;
+                            }
+                        }
+                        .hover .border {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            display: block;
+                            width: 66px;
+                            height: 66px;
+                            border: 2px solid #C00;
+                        }
+                    }
+                    .borderRed {
+                        border-color: red;
+                    }
+                }
+            }
+            .zs-deal {
+                float: right;
+                padding: 10px 20px 0 0;
+                width: 530px;
+                .zs-commodity-title {
+                    padding: 7px 0 0;
+                    font: 16px/22px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+                }
+                .zs-price-panel {
+                    margin: 18px 0 0;
+                    padding: 4px 10px;
+                    overflow: hidden;
+                    background: url("../imgs/G502_imgs/zs-price-panel.png");
+                    .zs-original-price {
+                        padding: 0 0 0 70px;
+                        position: relative;
+                        line-height: 32px;
+                        dt {
+                            position: absolute;
+                            top: 0;
+                            left: 5px;
+                            width: 65px;
+                            color: #999;
+                        }
+                    }
+                    .zs-sale-price {
+                        padding: 0 0 0 70px;
+                        position: relative;
+                        line-height: 32px;
+                        background: url("../imgs/G502_imgs/zs-price-panel.png");
+                        dt {
+                            position: absolute;
+                            top: 0;
+                            left: 5px;
+                            width: 65px;
+                            color: #999;
+                        }
+                        .zs-price {
+                            float: left;
+                            margin: -2px 0 0;
+                            height: 32px;
+                            overflow: hidden;
+                            font-size: 16px;
+                            vertical-align: middle;
+                            color: #c00;
+                            em {
+                                padding: 0 0 0 5px;
+                                font-family: tahoma;
+                                font-size: 30px;
+                                font-weight: bold;
+                                font-style: normal;
+                            }
+                        }
+                        .zs-countdown {
+                            float: left;
+                            margin: 5px 0 0 10px;
+                            padding: 0 3px;
+                            background: #c00;
+                            line-height: 18px;
+                            color: #fff;
+                        }
+                    }
+                }
+                /**********交易块*********/
+                .zs-detail-infor {
+                    padding: 10px 0 20px;
+                    dl {
+                        position: relative;
+                    }
+                    dt {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 32px;
+                        line-height: 32px;
+                        color: #666;
+                    }
+                    dd {
+                        padding: 0 0 0 65px;
+                        line-height: 32px;
+                    }
+                    .zs-freight-a {
+                        margin: 0 10px;
+                        padding: 5px 0 0;
+                        z-index: 2;
+                        overflow: hidden;
+                        dd {
+                            .zs-freight-area {
+                                float: left;
+                                position: relative;
+                                .area-selected {
+                                    position: relative;
+                                    float: left;
+                                    z-index: 5;
+                                    .area-name {
+                                        position: relative;
+                                        display: inline-block;
+                                        height: 23px;
+                                        border: 1px solid #e6e6e6;
+                                        padding: 0 20px 0 6px;
+                                        line-height: 23px;
+                                        cursor: pointer;
+                                        background-position: 100% 0;
+                                        z-index: 6;
+                                        background-color: #fff;
+                                    }
+                                    .selecet-layer-wrap {
+                                        display: none;
+                                        position: absolute;
+                                        top: 24px;
+                                        left: 0;
+                                        padding: 17px 17px 12px 14px;
+                                        width: 400px;
+                                        background-color: #fff;
+                                        border: 1px solid #bfbfbf;
+                                        box-shadow: 0 0 1px 2px rgba(230,230,230,.5);
+                                        z-index: 5;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .area-selected-infor {
+                        margin-left: 10px;
+                        float: left;
+                        .yufei {
+                            margin-left: 8px;
+                            i {
+                                font-style: normal;
+                                font-weight: bold;
+                            }
+                        }
+                        a {
+                            margin-left: 8px;
+                            color: #36c;
+                            text-decoration: underline;
+                        }
+                    }
+                    .zs-evaluate {
+                        margin: 5px 10px 0;
+                        dd {
+                            a {
+                                color: #333;
+                            }
+                            a:hover {
+                                color: red;
+                            }
+                            .line {
+                                padding: 0 10px;
+                                color: #e6e6e6;
+                            }
+                            em {
+                                color: #f33;
+                                font-weight: bold;
+                                font-style: normal;
+                            }
+                        }
+                    }
+                    .zs-service-bar {
+                        overflow: hidden;
+                        margin: 0 10px;
+                        #zs_shop_url {
+                            color: blue;
+                        }
+                        #zs_shop_url:hover {
+                            color: red;
+                        }
+                        li {
+                            float: left;
+                            position: relative;
+                            margin: 0 0 5px;
+                            padding: 0 0 0 28px;
+                            width: 54px;
+                            height: 24px;
+                            font: 12px/22px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+                        }
+                    }
+                    /***购买数量****/
+                    .zs-quantity {
+                        padding: 20px 0 0;
+                        border-top: 1px solid #EDEDED;
+                        position: relative;
+                        dt {
+                            top: 20px;
+                        }
+                        .amount-widget {
+                            float: left;
+                            margin: 0 10px 0 0;
+                            width: 102px;
+                            height: 28px;
+                            border: 1px solid #e6e6e6;
+                            .zs-no-decrease {
+                                /**减**/
+                                float: left;
+                                width: 28px;
+                                height: 28px;
+                                cursor: pointer;
+                                background: url("../imgs/bg.png") no-repeat;
+                                background-position: 0 -197px;
+                                background-color: #F8F8F8;
+                            }
+                            .zs-goods-number {
+                                /**数量框**/
+                                float: left;
+                                width: 44px;
+                                height: 28px;
+                                text-align: center;
+                                font: 12px/28px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+                                border: 0 none;
+                                border-left: 1px solid #e6e6e6;
+                                border-right: 1px solid #e6e6e6;
+                                color: #333;
+                                vertical-align: middle;
+                            }
+                            .zs-increase {
+                                /**加**/
+                                float: left;
+                                width: 28px;
+                                height: 28px;
+                                cursor: pointer;
+                                background: url("../imgs/bg.png") no-repeat;
+                                background-position: -32px -169px;
+                                background-color: #f8f8f8;
+                            }
+                        }
+                    }
+                    /***购买按钮***/
+                    .zs-deal-btn {
+                        padding: 30px 0 0 65px;
+                        height: 50px;
+                        .zs-buy-now {
+                            width: 140px;
+                            height: 50px;
+                            color: #fff;
+                            background: #C7254E;
+                            float: left;
+                            margin: 0 10px 0 0;
+                            border-radius: 10px;
+                            font: 18px/50px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+                            text-align: center;
+                        }
+                        .zs-buy-now:hover {
+                            background: red;
+                        }
+                        a:hover {
+                            text-decoration: none;
+                        }
+                        .zs-store-buy {
+                            width: 140px;
+                            height: 50px;
+                            color: #fff;
+                            background: pink;
+                            float: left;
+                            margin: 0 10px 0 0;
+                            border-radius: 10px;
+                            font: 18px/50px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+                            text-align: center;
+                        }
+                        .zs-store-buy:hover {
+                            background: hotpink;
+                        }
+                    }
+                }
+            }
+        }
+        .inner-right {
+            float: right;
+            width: 197px;
+            border-left: 1px solid #ededed;
+            .zs-store-name {
+                padding: 26px 10px;
+                text-align: center;
+                border-bottom: 1px solid #eee;
+            }
+            .zs-modbox {
+                margin: 0;
+                padding: 0 15px;
+                border: 0 none;
+                .zs-modbox-hd {
+                    padding: 0;
+                    border: 0 none;
+                    background: none;
+                    font-size: 12px;
+                    color: #999;
+                    height: 32px;
+                    font: 14px/32px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+                }
+                .zs-custom-service li {
+                    padding: 3px 0;
+                    color: #666;
+                    overflow: hidden;
+                    a {
+                        float: left;
+                    }
+                    img {
+                        margin: 0 6px 0 0;
+                        float: left;
+                        display: inline-block;
+                    }
+                    span {
+                        float: left;
+                        line-height: 24px;
+                        color: #666;
+                    }
+                }
+                .zs-contact-way {
+                    padding: 5px 0 0;
+                    li {
+                        position: relative;
+                        color: #666;
+                    }
+                }
+            }
+            .zs-btn {
+                display: inline-block;
+                margin: 0 4px;
+                width: 77px;
+                height: 28px;
+                font: 14px/28px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+                text-align: center;
+                border: 1px solid #e6e6e6;
+                -moz-border-radius: 2px;
+                -webkit-border-radius: 2px;
+                border-radius: 2px;
+                background: #fafafa;
+                color: #666;
+            }
+            .zs-btn:hover {
+                background: #8C8C8C;
+            }
+            li {
+                line-height: 24px;
+            }
+        }
+    }
+    .zs-modbox {
+        margin: 10px 0 0;
+        border: 1px solid #ededed;
+        .zs-modbox-hd {
+            padding: 0 10px;
+            height: 32px;
+            font: 14px/32px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+            border-bottom: 1px solid #ededed;
+            background: #fafafa;
+        }
+        .zs-product-list {
+            padding: 0 0 0 17px;
+            overflow: hidden;
+            li {
+                float: left;
+                padding: 20px 22px 22px;
+                width: 150px; //              height: 271px;
+            }
+            .zs-pic {
+                width: 150px;
+                height: 150px;
+                text-align: center;
+                display: table-cell;
+                vertical-align: middle;
+                cursor: pointer;
+            }
+            .zs-title-1 {
+                display: block;
+                padding: 13px 0 0;
+                height: 32px;
+                overflow: hidden;
+                font: 12px/16px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+                cursor: pointer;
+            }
+            .zs-price {
+                padding: 4px 0 0;
+                height: 30px;
+                overflow: hidden;
+                font: 12px/30px Verdana;
+                color: #f33;
+                span {
+                    font-size: 18px;
+                    font-style: normal;
+                };
+            }
+        }
+    }
+}
+/***主部包装****/
+.wrapper {
+    width: 1200px !important;
+    margin: 0 auto;
+    overflow: hidden;
+    .side-left {
+        float: left;
+        width: 200px;
+        overflow: hidden;
+        .zs-modbox {
+            margin: 10px 0 0;
+            border: 1px solid #ededed;
+            .zs-modbox-hd {
+                padding: 0 10px;
+                height: 32px;
+                font: 14px/32px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+                border-bottom: 1px solid #ededed;
+                background: #fafafa;
+                input {
+                    vertical-align: middle;
+                    font-size: 100%;
+                }
+            }
+            .searchgoods {
+                padding: 10px 15px;
+                dl {
+                    position: relative;
+                    margin: 0 0 6px;
+                    padding: 0 0 0 48px;
+                }
+                dt {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 26px;
+                    line-height: 26px;
+                    color: #666;
+                }
+                dd {
+                    overflow: hidden;
+                }
+                .text {
+                    float: left;
+                    padding: 3px 5px;
+                    width: 104px;
+                    height: 18px;
+                    line-height: 18px;
+                    border: 1px solid #e6e6e6;
+                }
+                .searchprice .text {
+                    width: 36px;
+                    padding: 3px 5px;
+                    height: 18px;
+                    line-height: 18px;
+                }
+                .goodsbtn {
+                    display: block;
+                    margin: 0 0 0 48px;
+                    width: 60px;
+                    height: 26px;
+                    border: 1px solid #d9d9d9;
+                    background: #f7f7f7;
+                    font: bold 12px/26px arial;
+                    cursor: pointer;
+                }
+            }
+        }
+        .goods-category {
+            ul {
+                padding: 0 0 0 43px;
+                li {
+                    padding: 0 0 0 10px;
+                    line-height: 22px;
+                    background: url("../imgs/bg.png") no-repeat;
+                    background-position: -56px -468px;
+                }
+            }
+        }
+        .zs-sales-news {
+            li {
+                margin: -1px 0 0;
+                padding: 10px 0;
+                border-top: 1px solid #f2f2f2;
+            }
+            .title {
+                display: block;
+                height: 36px;
+                line-height: 18px;
+                overflow: hidden;
+            }
+            .zs-price {
+                height: 22px;
+                font-size: 12px;
+                line-height: 22px;
+                color: #999;
+                span {
+                    color: red;
+                    font-weight: bold;
+                }
+            }
+        }
+        .all-goods {
+            margin: 0;
+            dt {
+                background: #fff;
+                border: 0 none;
+                font-weight: bold;
+                padding: 0 0 0 37px;
+                height: 34px;
+                font: 14px/34px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+                cursor: pointer;
+            }
+            dd {
+                display: block;
+                padding: 0 0 7px 37px;
+                line-height: 18px;
+                a {
+                    margin: 0 14px 0 0;
+                }
+            }
+        }
+        .unfold {
+            .position {
+                background-position: -23px -570px;
+            }
+            dt {
+                h3 {
+                    font: 14px/34px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+                }
+                padding: 0 0 0 37px;
+                height: 34px;
+                font: 14px/34px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+                background-color: #f7f7f7;
+                border-top: 1px solid #e6e6e6;
+                border-bottom: 1px solid #e6e6e6;
+                cursor: pointer;
+                background: url("../imgs/bg.png") no-repeat;
+                background-position: -23px -602px; //                          background-position: -23px -570px;
+                dd {
+                    display: block;
+                    padding: 5px 0;
+                    line-height: 22px;
+                }
+            }
+        }
+        #sell-hot-goods {
+            margin: 10px 0 0;
+            border: 1px solid #ededed;
+            .side-tab {
+                .current {
+                    border-bottom: 1px solid #f60;
+                }
+                li {
+                    float: left;
+                    width: 84px;
+                    height: 33px;
+                    border-bottom: 1px solid #e6e6e6;
+                    font: 14px/33px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+                    text-align: center;
+                    cursor: pointer;
+                }
+            }
+            span {
+                color: red;
+                margin-right: 10px;
+            }
+            li {
+                border-bottom: 1px solid #EDEDED;
+            }
+        }
+    }
+    .main {
+        float: right;
+        width: 990px;
+        position: relative;
+        .zs-tabbarzs-tabbar-nav {
+            position: absolute;
+            top: -10px;
+            left: 0;
+            z-index: 2;
+        }
+        #zsTabbar {
+            ul {
+                margin: 10px 0 0;
+                height: 36px;
+                border: 1px solid #ededed;
+                background: #fafafa;
+                li {
+                    float: left;
+                    border-right: 1px solid #ededed;
+                    a {
+                        padding: 0 15px;
+                        display: block;
+                        color: #333;
+                        font: 14px/36px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+                        white-space: nowrap;
+                    }
+                    a:hover {
+                        color: red;
+                        text-decoration: none;
+                    }
+                    em {
+                        color: red;
+                    }
+                    .phone-purchase {
+                        position: relative;
+                        .code {
+                            display: none;
+                            position: absolute;
+                            top: 36px;
+                            left: -1px;
+                            padding: 10px 14px;
+                            width: 91px;
+                            border: 1px solid #ededed;
+                            border-top-color: #fff;
+                            background: #fff;
+                            z-index: 1;
+                        }
+                        a {
+                            position: relative;
+                            zoom: 1;
+                            padding: 0 25px 0 38px;
+                            background-position: -24px -1230px;
+                            color: #c00;
+                            .ico {
+                                position: absolute;
+                                top: 15px;
+                                right: 16px;
+                                width: 5px;
+                                height: 3px;
+                                background: url("../imgs/bg.png");
+                                background-position: 0 -1241px;
+                            }
+                        }
+                    }
+                }
+                .cur {
+                    margin: -1px 0 -1px -1px;
+                    padding: 0 0 2px;
+                    position: relative;
+                    height: 34px;
+                    background: #fff;
+                    border: 1px solid #ededed;
+                    border-top: 2px solid #c00;
+                    border-bottom: 0 none;
+                    a {
+                        display: block;
+                        font: 14px/34px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+                        color: #333;
+                        text-decoration: none;
+                        padding: 0 15px;
+                        white-space: nowrap;
+                    }
+                }
+            }
+        }
+        /****商品详情****/
+        .zs-goods-detail {
+            position: absolute;
+            top: 50px;
+            .sevice-title {
+                margin-top: 20px;
+                width: 790px;
+                height: 33px;
+                background: url("../imgs/G502_imgs/sevice-title-new.png");
+                font: 20px/33px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+                .title {
+                    display: inline-block;
+                    padding: 0 0 0 10px;
+                    width: 160px;
+                    text-align: center;
+                    color: #c00;
+                }
+                .english-title {
+                    display: inline-block;
+                    padding: 0 0 0 50px;
+                    color: #fff;
+                }
+            }
+            .service-content {
+                overflow: hidden;
+                padding: 10px 0;
+                font: 14px/24px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+                color: #646464;
+                .zs-goods-content {
+                    width: 790px;
+                    overflow: hidden;
+                    p {
+                        margin-bottom: 10px;
+                    }
+                    img {
+                        width: 790px;
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
+        /****右栏****/
+        .side-right {
+            position: absolute;
+            right: 0;
+            top: 36px;
+            width: 118px;
+            border: 1px solid #ededed;
+            border-top: 0 none;
+            background: #fafafa;
+            margin: 20px 0;
+            padding: 0 40px;
+            overflow: hidden;
+            a {
+                display: block;
+                padding: 0 0 0 22px;
+                background: url("../imgs/G502_imgs/side-right.png") no-repeat;
+                color: #333; 
+            }
+            .cur {
+                a {
+                    background-position: 0 -45px;
+                    color: red;
+                }
+            }
+            ul {
+                margin: -14px 0;
+                li {
+                    height: 45px;
+                    font: 14px/45px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+}
+/**********************侧边工栏***************************/
+.toolbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 33px;
+    height: 100%;
+    background: #2d2d2d;
+    //  z-index: 1;
+    .side-order {
+        position: relative;
+        margin: 0 0 12px;
+        background-color: #2d2d2d;
+        height: 37px;
+        cursor: pointer;
+        background: url("../imgs/side.png") no-repeat;
+        top: 220px;
+        .side-order-red {
+            position: absolute;
+            z-index: 2;
+            top: 0;
+            right: 33px;
+            width: 0;
+            height: 37px;
+            background: red;
+            text-align: center;
+            color: white;
+            line-height: 37px;
+        }
+    }
+    .side-order:hover {
+        background-color: red;
+    }
+    .side-footprint {
+        position: relative;
+        margin: 0 0 12px;
+        background-color: #2d2d2d;
+        width: 37px;
+        height: 37px;
+        cursor: pointer;
+        background: url("../imgs/side.png") no-repeat;
+        background-position: 0 -74px;
+        top: 240px;
+        .side-footprint-red {
+            position: absolute;
+            top: 0;
+            right: 33px;
+            width: 0;
+            height: 37px;
+            background: red;
+            text-align: center;
+            color: white;
+            line-height: 37px;
+        }
+    }
+    .side-footprint:hover {
+        background-color: red;
+    }
+    .side-shopcrat {
+        position: relative;
+        margin: 0 0 12px;
+        background-color: #2d2d2d;
+        width: 37px;
+        height: 37px;
+        cursor: pointer;
+        background: url("../imgs/side.png") no-repeat;
+        background-position: 0 -111px;
+        top: 260px;
+        .side-shopcrat-red {
+            position: absolute;
+            top: 0;
+            right: 33px;
+            width: 0;
+            height: 37px;
+            background: red;
+            text-align: center;
+            color: white;
+            line-height: 37px;
+        }
+    }
+    .side-shopcrat:hover {
+        background-color: red;
+    }
+    .side-feedback {
+        width: 27px;
+        height: 27px;
+        cursor: pointer;
+        color: #fff;
+        display: block;
+        padding: 5px;
+        text-align: center;
+        font: 12px/14px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+        top: 440px;
+        position: absolute;
+    }
+    .side-backtop {
+        display: block;
+        width: 37px;
+        height: 37px;
+        background: url("../imgs/side.png") no-repeat;
+        background-position: 0 -185px;
+        background-color: #2d2d2d;
+        position: absolute;
+        top: 600px;
+    }
+    .side-backtop:hover {
+        background-color: red;
+    }
+}
+/******************添加购物车****************************/
+ .zs-layer-box {
+    filter: none;
+        position: fixed;
+    top: 50%;
+    left: 50%;
+    margin: 0 0 0 -208px;
+    padding: 4px;
+    width: 416px;
+    background: rgba(0,0,0,0.15);
+    z-index: 200;
+    .zs-layer-body {
+        padding: 40px 20px 40px 48px;
+        background: #fff;
+        border: 1px solid #ccc;
+        h3 {
+            padding: 0 0 5px;
+            font: 18px/24px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+        }
+        p {
+            line-height: 26px;
+            color: #666;
+        }
+    }
+    .zs-layer-hd {
+        position: relative;    }
+    .zs-close {
+        position: absolute;
+        top: -30px;
+        right: -10px;
+        display: block;
+        width: 18px;
+        height: 17px;
+        text-indent: -9999em;
+        font: 0/0 arial;
+        background: url(../imgs/bg.png) no-repeat;
+        background-position: -8px -280px;
+        cursor: pointer;
+    }
+        .zs-layer-content {
+            padding: 0;
+            .zs-success {
+                padding: 10px 0 8px 60px;
+                  background: url(../imgs/bg.png) no-repeat;
+                background-position: -14px -893px;
+            }
+        }
+        .zs-layer-foot {
+            padding: 15px 0 0 60px;
+            .zs-settlement-btn {
+                display: inline-block;
+                margin: 0 10px 0 0;
+                width: 110px;
+                height: 30px;
+                font-size: 12px;
+                line-height: 30px;
+                color: #fff;
+                border: 0 none;
+                background: #c00;
+                cursor: pointer;
+                text-align: center;
+                 text-decoration: none;
+                a {
+                    color: #36c;
+                    text-decoration: none;
+                }
+            }
+        }
+}
+
+
+
+
+
+
+
+
+
+

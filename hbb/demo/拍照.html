@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title></title>
+   	<style>
+   		html,body{
+   			width: 100%;
+   			height: 100%;
+   			margin: 0;
+   			padding: 0;
+   			border: 0;
+   		}
+   		#showDiv{
+   			width: 100%;
+   			height: auto;
+    		word-wrap: break-word;
+    		border: 1px dotted #000;
+    		min-height: 200px;
+   		}
+   		button{
+   			width: 80%;
+   			display: inherit;
+   			height: 50px;
+   			background-color: orange;
+   			color: #000;
+   			font-family: "微软雅黑";
+   			font-size: 30px;
+   			font-weight: 600;
+   			margin: 20px auto;
+   		}
+   	</style>
+</head>
+<body>
+	
+	<div id="showDiv"></div>
+	<button onclick="takePhoto()">拍照</button>
+	
+	<script type="text/javascript" src="../js/jquery-1.12.1.js" ></script>
+	 <script type="text/javascript">
+    	
+   		// 扩展API加载完毕后调用onPlusReady回调函数 
+		document.addEventListener( "plusready", onPlusReady, false );
+		var r = null; 
+		var cmr = null;
+		// 扩展API加载完毕，现在可以正常调用扩展API 
+		function onPlusReady() {
+			// 获取设备默认的摄像头对象 
+			cmr = plus.camera.getCamera();
+			var tmpStr = "<div> 摄像头支持的拍照分辨率: "+ cmr.supportedImageResolutions +"</div>";
+			$("#showDiv").append(tmpStr);
+			var tmpstr1 = "<div> 摄像头支持的拍照文件格式 :"+ cmr.supportedImageFormats +"</div>";
+			$("#showDiv").append(tmpstr1);
+			
+		}
+   		
+  		function takePhoto(){
+  			if(cmr){
+//				cmr.captureImage(sucFuc(),errFuc(),options);
+  				cmr.captureImage(function( capturedFile  ){
+  					$("#showDiv").append("<br/><div> 拍照或摄像操作保存的文件路径: "+ capturedFile +"</div>");
+  				},function(error){
+  					var code = error.code; // 错误编码
+					var message = error.message; // 错误描述信息
+					$("#showDiv").append("<br/><div> 错误编码: "+ code +"<br/>错误描述信息: "+ message +"</div>");
+  				},{
+  					index:2
+  				})
+  			}
+  		}
+  		
+  		
+    </script>
+	
+</body>
+</html>
