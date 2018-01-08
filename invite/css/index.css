@@ -1,0 +1,279 @@
+img,
+a,
+p,
+body,
+html,
+select,
+div,
+label,
+option,
+ul,
+li,
+dl,
+dd,
+span,
+input,
+select,
+i,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    color: #d2d3d5;
+    font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, SimSun, sans-serif;
+}
+
+body {
+    background-image: url("../img/beijing.jpg");
+    background-repeat: repeat-y;
+    background-size: 100%;
+}
+
+li {
+    list-style: none;
+}
+
+@media screen and (max-width: 359px) and (min-width: 320px) {
+    html,
+    body {
+        font-size: 10px !important;
+    }
+}
+
+@media screen and (max-width: 374px) and (min-width: 360px) {
+    html,
+    body {
+        font-size: 10.5px !important;
+    }
+}
+
+@media screen and (max-width: 413px) and (min-width: 375px) {
+    html,
+    body {
+        font-size: 11px !important;
+    }
+}
+
+@media screen and (max-width: 639px) and (min-width: 414px) {
+    html,
+    body {
+        font-size: 12px !important;
+    }
+}
+
+@media screen and (min-width: 640px) {
+    html,
+    body {
+        font-size: 18px !important;
+    }
+}
+
+/*.common {*/
+
+/*}*/
+
+.center {
+    max-width: 700px;
+    margin: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+/*设计优选*/
+.logo-box {
+    padding-top: 4.67rem;
+    width: 77%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding-left: 0;
+    padding-right: 0
+}
+
+.logo-box img {
+    width: 100%;
+    display: block
+}
+
+/*找素材*/
+.material-box {
+    padding-top: 4rem;
+    font-size: 1rem;
+    overflow: hidden;
+}
+
+.material-box li {
+    display: inline-block;
+    width: 53%;
+    float: left;
+    margin-bottom: 1.17rem;
+    border-bottom: 1px solid #133042;
+
+}
+
+.material-box .left-li {
+    width: 42%;
+    margin-right: 4%;
+}
+
+.material-box li .prow {
+    display: inline-block;
+    width: 3.75rem;
+    height: 1.75rem;
+    background-color: #133042;
+    text-align: center;
+    line-height: 1.75rem;
+    font-weight: bold;
+}
+
+.material-box li .stern {
+    display: inline-block;
+    line-height: 1.75rem;
+    margin-left: 0.5rem;
+    font-size: 0.92rem;
+    font-family: "Source Code Pro"
+}
+
+/*不用跑断腿*/
+.assistant-box {
+    padding: 3.5rem 0rem 3rem 0rem;
+}
+
+.assistant-box img {
+    width: 100%;
+    display: block
+}
+
+/*帮你*/
+.help-box {
+    padding: 2.58rem;
+    background-color: rgba(21, 48, 66, 0.3);
+}
+
+.help-box img {
+    width: 100%;
+    display: block
+}
+
+/*设计优选*/
+.devise-box {
+    padding: 2.5rem 0rem 1rem 0rem;
+}
+
+.devise-box img {
+    width: 100%;
+    display: block
+}
+
+/*主体介绍*/
+.introduce-box {
+    background-color: rgba(21, 48, 66, 0.3);
+    padding: 1rem;
+}
+
+.introduce-box .title {
+    color: #fbfbfb;
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.67rem;
+}
+
+.introduce-box .title-explain {
+    margin-bottom: 1.5rem;
+
+}
+
+.introduce-box li {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 1.6rem;
+}
+
+.introduce-box .prow {
+    line-height: 1.5rem;
+    background-color: rgba(21, 48, 66, 0.8);
+    width: 4.33rem;
+    text-align: center;
+    position: relative
+}
+
+.introduce-box .prow .prow-word {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+}
+
+.introduce-box .prow .line-2 {
+    margin-top: -1.5rem;
+}
+
+.introduce-box .prow .line-3 {
+    margin-top: -2.25rem;
+}
+
+.introduce-box .stern {
+    border-bottom: 1px solid #133042;
+    padding-left: 0.75rem;
+    line-height: 1.5rem;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+/*尾部*/
+.footer-box {
+    text-align: center;
+    margin-bottom: 6.08rem;
+}
+
+.footer-box .title {
+    color: #fbfbfb;
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-top: 1.33rem;
+    margin-bottom: 0.67rem;
+}
+
+/*按钮*/
+.btn-box {
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    /*background-color: rgba(232, 71, 2, 0.9);*/
+    height: 3.75rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fbfbfb;
+    text-align: center;
+    line-height: 3.75rem;
+    cursor: pointer;
+    vertical-align: middle;
+    display: inline-block;
+    background-image: url("../img/shenqing-b.png");
+    background-repeat: repeat-y;
+    background-size: 100%;
+}
+
+.btn-box img {
+    display: inline-block;
+    height: 2rem;
+    vertical-align: middle;
+    margin-top: -0.3rem;
+}
