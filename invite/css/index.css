@@ -47,35 +47,39 @@ li {
 @media screen and (max-width: 359px) and (min-width: 320px) {
     html,
     body {
-        font-size: 20px !important;
+        font-size: 10px !important;
+    }
+    .center {
+        padding-left: 1.4rem !important;
+        padding-right: 1.4rem !important;;
     }
 }
 
 @media screen and (max-width: 374px) and (min-width: 360px) {
     html,
     body {
-        font-size: 21px !important;
+        font-size: 11px !important;
     }
 }
 
 @media screen and (max-width: 413px) and (min-width: 375px) {
     html,
     body {
-        font-size: 22px !important;
+        font-size: 12px !important;
     }
 }
 
 @media screen and (max-width: 639px) and (min-width: 414px) {
     html,
     body {
-        font-size: 24px !important;
+        font-size: 13px !important;
     }
 }
 
 @media screen and (min-width: 640px) {
     html,
     body {
-        font-size: 36px !important;
+        font-size: 18px !important;
     }
 }
 
@@ -86,13 +90,13 @@ li {
 .center {
     max-width: 700px;
     margin: auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 1.8rem;
+    padding-right: 1.8rem;
 }
 
 /*设计优选*/
 .logo-box {
-    padding-top: 2.33rem;
+    padding-top: 4.67rem;
     width: 77%;
     max-width: 700px;
     margin: 0 auto;
@@ -107,16 +111,15 @@ li {
 
 /*找素材*/
 .material-box {
-    padding-top: 2rem;
+    padding-top: 4rem;
     overflow: hidden;
-    font-size: 0.5rem;
 }
 
 .material-box li {
     display: inline-block;
     width: 53%;
     float: left;
-    margin-bottom: 0.58rem;
+    margin-bottom: 1.17rem;
     border-bottom: 1px solid #133042;
 
 }
@@ -128,25 +131,26 @@ li {
 
 .material-box li .prow {
     display: inline-block;
-    width: 1.75rem;
-    height: 0.875rem;
+    width: 3.5rem;
+    height: 1.75rem;
     background-color: #133042;
     text-align: center;
-    line-height: 0.875rem;
+    line-height: 1.75rem;
     font-weight: bold;
-
+    font-size: 1rem;
 }
 
 .material-box li .stern {
     display: inline-block;
-    line-height: 0.875rem;
-    margin-left: 0.1rem;
+    line-height: 1.75rem;
+    margin-left: 0.2rem;
+    font-size: 1rem;
 
 }
 
 /*不用跑断腿*/
 .assistant-box {
-    padding: 1.75rem 0rem 1.5rem 0rem;
+    padding: 3.5rem 0rem 3rem 0rem;
 }
 
 .assistant-box img {
@@ -156,7 +160,7 @@ li {
 
 /*帮你*/
 .help-box {
-    padding: 1.5rem;
+    padding: 2.58rem;
     background-color: rgba(21, 48, 66, 0.3);
 }
 
@@ -167,7 +171,7 @@ li {
 
 /*设计优选*/
 .devise-box {
-    padding: 1.25rem 0rem 0.5rem 0rem;
+    padding: 2.5rem 0rem 1rem 0rem;
 }
 
 .devise-box img {
@@ -179,18 +183,17 @@ li {
 .introduce-box {
     background-color: rgba(21, 48, 66, 0.3);
     padding: 1rem;
-    font-size: 0.5rem;
 }
 
 .introduce-box .title {
     color: #fbfbfb;
-    font-size: 0.875rem;
+    font-size: 1.25rem;
     font-weight: bold;
-    margin-bottom: 0.33rem;
+    margin-bottom: 0.67rem;
 }
 
 .introduce-box .title-explain {
-    margin-bottom: 0.75rem;
+    margin-bottom: 1.5rem;
 
 }
 
@@ -204,13 +207,13 @@ li {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    margin-bottom: 0.8rem;
+    margin-bottom: 1.6rem;
 }
 
 .introduce-box .prow {
-    line-height: 0.75rem;
+    line-height: 1.5rem;
     background-color: rgba(21, 48, 66, 0.8);
-    width: 2.17rem;
+    width: 4.33rem;
     text-align: center;
     position: relative
 }
@@ -222,34 +225,34 @@ li {
 }
 
 .introduce-box .prow .line-2 {
-    margin-top: -0.75rem;
+    margin-top: -1.5rem;
 }
 
 .introduce-box .prow .line-3 {
-    margin-top: -1.12rem;
+    margin-top: -2.25rem;
 }
 
 .introduce-box .stern {
     border-bottom: 1px solid #133042;
-    padding-left: 0.375rem;
-    line-height: 0.75rem;
+    padding-left: 0.75rem;
+    line-height: 1.5rem;
     padding-top: 3px;
     padding-bottom: 3px;
+    width: 100%;
 }
 
 /*尾部*/
 .footer-box {
-    font-size: 0.5rem;
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 6.08rem;
 }
 
 .footer-box .title {
     color: #fbfbfb;
-    font-size: 0.75rem;
+    font-size: 1.25rem;
     font-weight: bold;
-    margin-top: 0.665rem;
-    margin-bottom: 0.335rem;
+    margin-top: 1.33rem;
+    margin-bottom: 0.67rem;
 }
 
 /*按钮*/
@@ -259,12 +262,12 @@ li {
     bottom: 0px;
     left: 0;
     /*background-color: rgba(232, 71, 2, 0.9);*/
-    height: 1.875rem;
-    font-size: 0.75rem;
+    height: 3.75rem;
+    font-size: 1.5rem;
     font-weight: bold;
     color: #fbfbfb;
     text-align: center;
-    line-height: 1.875rem;
+    line-height: 3.75rem;
     cursor: pointer;
     vertical-align: middle;
     display: inline-block;
@@ -275,7 +278,7 @@ li {
 
 .btn-box img {
     display: inline-block;
-    height: 1rem;
+    height: 2rem;
     vertical-align: middle;
-    margin-top: -0.15rem;
+    margin-top: -0.3rem;
 }
