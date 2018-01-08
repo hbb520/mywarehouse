@@ -49,6 +49,7 @@ li {
     body {
         font-size: 10px !important;
     }
+
     .center {
         padding-left: 1.4rem !important;
         padding-right: 1.4rem !important;;
@@ -132,17 +133,16 @@ li {
 .material-box li .prow {
     display: inline-block;
     width: 3.5rem;
-    height: 1.75rem;
     background-color: #133042;
     text-align: center;
-    line-height: 1.75rem;
+    line-height: 2.0rem;
     font-weight: bold;
     font-size: 1rem;
 }
 
 .material-box li .stern {
     display: inline-block;
-    line-height: 1.75rem;
+    line-height: 2rem;
     margin-left: 0.2rem;
     font-size: 1rem;
 
@@ -171,7 +171,7 @@ li {
 
 /*设计优选*/
 .devise-box {
-    padding: 3.6rem 0rem 2rem 0rem;
+    padding: 4.6rem 0rem 2rem 0rem;
 }
 
 .devise-box img {
@@ -189,7 +189,7 @@ li {
     color: #fbfbfb;
     font-size: 1.25rem;
     font-weight: bold;
-    margin-bottom: 0.67rem;
+    margin-bottom: 0.4rem;
 }
 
 .introduce-box .title-explain {
@@ -211,7 +211,7 @@ li {
 }
 
 .introduce-box .prow {
-    line-height: 1.5rem;
+    line-height: 1.6rem;
     background-color: rgba(21, 48, 66, 0.8);
     width: 4.33rem;
     text-align: center;
@@ -226,17 +226,17 @@ li {
 }
 
 .introduce-box .prow .line-2 {
-    margin-top: -1.5rem;
+    margin-top: -1.6rem;
 }
 
 .introduce-box .prow .line-3 {
-    margin-top: -2.25rem;
+    margin-top: -2.4rem;
 }
 
 .introduce-box .stern {
     border-bottom: 1px solid #133042;
     padding-left: 0.75rem;
-    line-height: 1.5rem;
+    line-height: 1.6rem;
     padding-top: 3px;
     padding-bottom: 3px;
     width: 100%;
