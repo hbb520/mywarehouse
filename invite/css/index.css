@@ -273,7 +273,7 @@ li {
     display: inline-block;
     background-image: url("../img/shenqing-b.png");
     background-repeat: repeat-y;
-    background-size: 100%;
+    background-size: 100% 100%;
 }
 
 .btn-box img {
