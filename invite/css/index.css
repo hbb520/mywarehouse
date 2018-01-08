@@ -171,7 +171,7 @@ li {
 
 /*设计优选*/
 .devise-box {
-    padding: 2.5rem 0rem 1rem 0rem;
+    padding: 3.6rem 0rem 2rem 0rem;
 }
 
 .devise-box img {
@@ -215,7 +215,8 @@ li {
     background-color: rgba(21, 48, 66, 0.8);
     width: 4.33rem;
     text-align: center;
-    position: relative
+    position: relative;
+    font-weight: bold;
 }
 
 .introduce-box .prow .prow-word {
@@ -244,7 +245,7 @@ li {
 /*尾部*/
 .footer-box {
     text-align: center;
-    margin-bottom: 6.08rem;
+    padding-bottom: 6.08rem;
 }
 
 .footer-box .title {
